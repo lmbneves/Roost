@@ -1,0 +1,3 @@
+homepage is search bar by four options: number of rooms, landlord, price, distance
+
+Gray text in top navbar: search by x, y, z

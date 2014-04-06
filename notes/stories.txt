@@ -1,0 +1,9 @@
+As an on-campus student looking to move off-campus, I would use the site to find available houses to rent
+
+As a student unsure of how many rooms a house has, I would use the site to look up the specs of a given house
+
+As a student new to off-campus housing, I would use the site to find out more about landlords in the area
+
+As a student unhappy with the information my landlord did not disclose to me, I would use the site to inform other students about the details of a house
+
+As a student looking for roommates, I would use the site to notify how many rooms are available in my house

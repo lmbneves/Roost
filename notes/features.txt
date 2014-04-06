@@ -1,0 +1,80 @@
+Features
+
+directory of houses in University of Rochester area
+	- be able to search, rate, and comment on houses
+
+directory of landlords in University of Rochester area
+	- be able to search, rate, comment on landlords
+
+filters:
+	availability
+	number of bedrooms
+		- available rooms if sub-leased house
+	number of bathrooms
+	pricing - min, max
+	distance
+	pets
+	landlord
+	parking - driveway, on-street
+	utilities included
+	neighborhood
+	house, apartment
+	top rated
+	view all houses/all landlords
+
+comments section with both quantitative and qualitative data from students
+
+landlord feedback section
+	- if they want to use, must verify that they are a landlord by contacting us
+
+top display with house picture and average of comments section data
+	- address
+	- pricing
+	- age
+	- house rating, reviews
+	- Google maps
+	- what's nearby
+	- bus route
+	- house specs
+	- availability
+	- link to landlord page
+
+landlord profile
+	- reviews
+	- property listing
+	- contact info
+
+student profile (all optional)
+	- contact info
+	- known houses
+	- reviews given
+
+registered user can bookmark, rate, contact, dm
+
+Google maps street view -> use API
+
+link/API to crime frequency site
+
+if you have account, be able to bookmark/favorite houses
+
+private messaging service between accounts
+
+as a user, be able to indicate that you:
+	- previously lived in the house
+	- just visited the house
+	- knew people who previously lived there
+	- protect my identity
+
+social media integration
+	- Facebook, Twitter
+
+complex commenting by room
+
+prompt to comment on particular part of house
+
+top qualities of hosue
+	- landlord friendliness/responsiveness
+	- cleanliness/wear-and-tear/state
+	- spaciousness/openness
+	- neighborhood/neighbors/street
+	- overall recommendation

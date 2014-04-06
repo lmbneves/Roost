@@ -1,0 +1,73 @@
+/* ====================================
+   Constants/Variables
+   ==================================== */
+/* ====================================
+   Base
+   ==================================== */
+html {
+  position: relative;
+  min-height: 100%;
+  margin: 0;
+  font-family: sans-serif; }
+
+body {
+  margin: 0;
+  margin-bottom: 50px; }
+
+input {
+  font-style: italic; }
+
+/* important for input addons */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* ====================================
+   Header Navigation Bar
+   ==================================== */
+.navbar {
+  margin: 0;
+  z-index: 1000;
+  /* sets in foreground */
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  height: 55px;
+  margin-bottom: 20px;
+  background-color: #f2f2f2; }
+  .navbar #nav {
+    float: left;
+    /* navbar links */ }
+    .navbar #nav li {
+      display: inline-block;
+      padding-right: 10px;
+      padding-left: 10px; }
+      .navbar #nav li a {
+        text-decoration: none; }
+  .navbar #register {
+    float: right;
+    margin-right: 40px;
+    /* sign up/in links */ }
+    .navbar #register li {
+      display: inline-block;
+      padding-right: 10px;
+      padding-left: 10px; }
+      .navbar #register li a {
+        text-decoration: none; }
+
+/* ====================================
+   Footer
+   ==================================== */
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* fixed footer height and color */
+  height: 50px;
+  background-color: #f2f2f2; }
