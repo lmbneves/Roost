@@ -61,8 +61,98 @@
 
     <!-- page content --> 
     <div class="container">
-    	<h1> 2 Menlo Place </h1>
+		<!-- house information -->
+    	<div class="name">
+			<h1>5 Menlo Place</h1>
+		</div>
+		<div class="headinfo">
+			<h3>Pricing: ***** | Distance: *** | Utilities: *** | Neighborhood: **</h3>
+			<h3>Availability: YES</h3>
+		</div>
         <div id="map-canvas"></div>
+		<div class="bodyinfo">
+			<p>
+			Landlord: <a href="">x</a><br>
+			Cost: x<br>
+			Bedrooms: x | Bathrooms: x<br>
+			Distance from (School of choice): x<br>
+			Utilities: x<br>
+			Neighborhood: x<br>
+			</p>
+		</div>
+		
+		<!-- comments & ratings -->
+		<h2>COMMENTS & RATINGS</h2>
+		<div class="comments">
+			<div class="left">
+				<p>
+					Price: *****<br>
+					Distance: ***<br>
+					Utilities: ***<br>
+					Neighborhood: **
+				</p>
+			</div>
+			<div class="right">
+				<p>
+					much price<br>
+					such tame<br>
+					so convenient<br>
+					buy many land<br>
+					wow<br>
+					<br>
+					-<a href="">doge</a>
+				</p>
+			</div>
+		</div>
+		<div class="comments">
+			<div class="left">
+				<p>rating 2</p>
+			</div>
+			<div class="right">
+				<p>comment 2</p>
+			</div>
+		</div>
+		
+		<!-- Your Comments & Ratings -->
+		<br>
+		<fieldset>
+		<legend>YOUR COMMENTS & RATINGS:</legend>
+			<form action="">
+				<select name="price">
+					<option value="&le;5000">&le; $5000</option>
+					<option value="&le;10000">&le; $10000</option>
+					<option value="&le;15000">&le; $15000</option>
+					<option value="&le;20000">&le; $20000</option>
+					<option value="&le;25000">&le; $25000</option>
+				</select>
+				<select name="distance">
+					<option value="&le;0.5">&le; 0.5mi</option>
+					<option value="&le;1.0">&le; 1.0mi</option>
+					<option value="&le;1.5">&le; 1.5mi</option>
+					<option value="&le;2.0">&le; 2.0mi</option>
+					<option value="&le;2.5">&le; 2.5mi</option>
+				</select>
+				<select name="utilities">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+				</select>
+				<select name="neighborhood">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+				</select>
+			</form>
+			<br>
+			<form name="input" action="" method="get">
+			Your Comment: <input type="text" name="Comment" value="Comment"><br>
+			<input type="submit" value="Submit">
+			</form>
+		</fieldset>
     </div>
   </body>
 </html>
