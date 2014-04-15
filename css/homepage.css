@@ -53,3 +53,14 @@ html {
   border-bottom: 1px solid transparent;
   border-top-left-radius: 3px;
   border-top-right-radius: 3px; }
+  
+#backdrop{
+  background-color: #f2f2f2;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px 30px 10px 30px;
+  border: 1px solid transparent;
+  border-radius: 20px;
+  -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+  width: 1100px;}
