@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Street View containers</title>
+        <!-- ========== CSS stylesheets ========== -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link href="css/grid.css" type="text/css" rel="stylesheet">
+    <link href="css/layout.css" type="text/css" rel="stylesheet">
+
+    <!-- stylesheet for this site -->
+    <link href="css/base.css" type="text/css" rel="stylesheet">
+
+    <!-- stylesheet for this page -->
+    <link href="css/houseprofile1.css" type="text/css" rel="stylesheet">
+
+    <!-- ============= favicons ============= -->
+
+    <!-- =============== fonts =============== -->
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300,100,500' rel='stylesheet' type='text/css'>
+	<!-- =============== Map Canvas ================ -->
+   
+    
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+    
+    <script>
+		function initialize() {
+		  var menlo = new google.maps.LatLng(43.135191, -77.613595);
+		  var panoramaOptions = {
+			position: menlo,
+			pov: {
+			  heading: 165,
+			  pitch: 0
+			},
+			zoom: 1
+		  };
+		  var myPano = new google.maps.StreetViewPanorama(
+			  document.getElementById('map-canvas'),
+			  panoramaOptions);
+		  myPano.setVisible(true);
+		}
+
+		google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+    
+  </head>
+  <body>
+  	<!-- top navbar -->
+    <div class="super-container navbar" role="navigation">
+        <ul id="nav">
+          <li><a href="index.html">Roost</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="BrowseSection.html">Browse</a></li>
+        </ul>
+        <ul id="register">
+          <li><a href="">Sign in</a></li>
+          <li>|</li>
+          <li><a href="">Sign up</a></li>
+        </ul>
+    </div>
+
+    <!-- page content --> 
+    <div class="container">
+		<!-- house information -->
+    	<div class="name">
+			<h1>5 Menlo Place</h1>
+		</div>
+	<div class="left">
+	  <dl>
+	    <dt>5 Menlo Place</dt>
+	    <dt>Rochester, New York 14620</dt>
+	    <dt>5 bed, 2 full, 1 partial bathroom, 2767 square feet</dt>
+	  </dl>
+	      <!-- shitty code below beware! --> 
+	</div>
+		<div class="headinfo">
+			<h3>Availability: YES</h3>
+		</div>
+        <div id="map-canvas"></div>
+		<!-- Property Information -->
+		<h2>Property Information</h2>
+		<div class="comments">
+			<div class="left">
+				<p>
+				  <dl>
+				    <dt>Cost</dt>
+				    <dd>$300</dd>
+				    <dt>Bedrooms</dt>
+				    <dd>5</dd>
+				    <dt>Distance from School</dt>
+				    <dd>1.2 miles</dd>
+				    <dt>Utilities</dt>
+				    <dd>Heat and Electricity</dd>
+				    <dt>Neighborhood</dt>
+				    <dd>South Wedge</dd>
+				  </dl>
+				</p>
+			</div>
+			<div class="right">
+				<p>
+				  <img border = "0" src= "images/profile.jpg" alt="Profile Nigga" width="175" height=
+		      "175"><br>
+				    Landlord: <a href="">Barack Obama</a>
+				</p>
+			</div>
+		</div>
+		<div class="comments">
+			<div class="left">
+				<p><strong>Average Score</strong>
+				<dl>
+				    <dt>Price:</dt>
+				    <dd><img border = "0" src= "images/stars.png" alt="Stars Nigga" width="20" height=
+		      "20">
+				    <img border = "0" src= "images/stars.png" alt="Stars Nigga" width="20" height=
+		      "20">
+				    <img border = "0" src= "images/stars.png" alt="Stars Nigga" width="20" height=
+		      "20">
+				    <img border = "0" src= "images/stars.png" alt="Stars Nigga" width="20" height=
+		      "20">
+				    <img border = "0" src= "images/stars.png" alt="Stars Nigga" width="20" height=
+		      "20"> Much price nigga</dd>
+				    <dt>Distance:</dt>
+				    <dd><img border = "0" src= "images/stars.png" alt="Stars Nigga" width="20" height=
+		      "20">
+				    <img border = "0" src= "images/stars.png" alt="Stars Nigga" width="20" height=
+		      "20">
+				    <img border = "0" src= "images/stars.png" alt="Stars Nigga" width="20" height=
+		      "20"> Such walk nigga</dd>
+				    <dt>Utilities:</dt>
+				    <dd><img border = "0" src= "images/stars.png" alt="Stars Nigga" width="20" height=
+		      "20">
+				    <img border = "0" src= "images/stars.png" alt="Stars Nigga" width="20" height=
+		      "20">
+				    <img border = "0" src= "images/stars.png" alt="Stars Nigga" width="20" height=
+		      "20">Many conservation nigga</dd>
+				    <dt>Neighborhood</dt>
+				    <dd><img border = "0" src= "images/stars.png" alt="Stars Nigga" width="20" height=
+		      "20">
+				    <img border = "0" src= "images/stars.png" alt="Stars Nigga" width="20" height=
+		      "20">So good in da hood nigga</dd>
+				  </dl>
+				</p>
+			</div>
+			<div class="right">
+				<p><strong>Top Comment</strong></br>
+				Insert honest opinions here
+				</p>
+			</div>
+		</div>
+		
+		<!-- Comments & Ratings -->
+		<br>
+		<fieldset>
+		<legend>COMMENTS & RATINGS:</legend>
+		<!-- not too sure what these values are here for...
+			<form action="">
+				<select name="price">
+					<option value="&le;5000">&le; $5000</option>
+					<option value="&le;10000">&le; $10000</option>
+					<option value="&le;15000">&le; $15000</option>
+					<option value="&le;20000">&le; $20000</option>
+					<option value="&le;25000">&le; $25000</option>
+				</select>
+				<select name="distance">
+					<option value="&le;0.5">&le; 0.5mi</option>
+					<option value="&le;1.0">&le; 1.0mi</option>
+					<option value="&le;1.5">&le; 1.5mi</option>
+					<option value="&le;2.0">&le; 2.0mi</option>
+					<option value="&le;2.5">&le; 2.5mi</option>
+				</select>
+				<select name="utilities">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+				</select>
+				<select name="neighborhood">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+				</select>
+			</form>
+			<br>   -->
+			<form name="input" action="" method="get">
+			Your Comment: <input type="text" name="Comment" value="Comment"><br>
+			<input type="submit" value="Submit">
+			</form>
+		</fieldset>
+    </div>
+  </body>
+</html>

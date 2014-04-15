@@ -1,0 +1,31 @@
+/* ====================================
+   CSS FILE - HOMEPAGE
+   ==================================== */
+/* ====================================
+   Base
+   ==================================== */
+html {
+  /* loads and sets image at full-wid/private/var/folders/pt/kgj6gzs93gg7746dlbx4c4680000gn/T/209e3a46-a948-4017-9322-7953b8ad227c/var/www/html/Roost/css/homepage.cssth full-height of window */
+  background: url(../images/darkblurredskyline.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+
+/* ====================================
+   Search Form
+   ==================================== */
+.container {
+  text-align: center;
+  background-color: #f2f2f2;
+  padding: 20px 30px 10px 30px;
+  border: 1px solid transparent;
+  border-radius: 20px;
+  -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4); }
+
+#map-canvas {
+  height: 500px;
+  width: 73%;
+  margin-left: auto;
+  margin-right: auto;}
