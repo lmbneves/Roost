@@ -8,9 +8,7 @@ html {
   position: relative;
   min-height: 100%;
   margin: 0;
-  font-family: sans-serif;
-  background-color: #d6e8c0;
-  min-width: 900px; }
+  font-family: sans-serif; }
 
 body {
   margin: 0;
@@ -42,7 +40,7 @@ input {
   font-weight: 400;
   height: 55px;
   margin-bottom: 20px;
-  background-color: #fcfcfc; }
+  background-color: #f2f2f2; }
   .navbar #nav {
     float: left;
     /* navbar links */ }
@@ -70,7 +68,6 @@ input {
   position: absolute;
   bottom: 0;
   width: 100%;
-  margin-top: 20px;
   /* fixed footer height and color */
   height: 50px;
-  background-color: #fcfcfc; }
+  background-color: #f2f2f2; }

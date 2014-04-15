@@ -2,9 +2,8 @@
    Constants/Variables
    ==================================== */
    $footer-height: 50px;
-   $header-color: darken(white, 1%);
+   $header-color: darken(white, 5%);
    $roboto: 'Roboto', sans-serif; // weights: 100, 300, 400, 500, 700
-   $background-color: #D6E8C0; // faint green
 
 /* ====================================
    Base
@@ -14,8 +13,6 @@ html {
 	min-height: 100%;
 	margin: 0;
   font-family: sans-serif;
-  background-color: $background-color;
-  min-width: 900px;
 }
 
 body {
@@ -94,7 +91,6 @@ input {
   position: absolute;
   bottom: 0;
   width: 100%;
-  margin-top: 20px;
 
   /* fixed footer height and color */  
   height: $footer-height;
