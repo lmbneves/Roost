@@ -57,7 +57,7 @@ width: 40%;
 }
 
 .container .comments .right{
-float: right;
+float: left;
 /*padding-left: 1%;*/
 padding-right: 1%;
 width: 50%;
