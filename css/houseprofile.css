@@ -26,9 +26,7 @@ html {
   font-weight: 400;}
 
 .container .name{
-color: black;
-font-style: italic;
-font-size: 25px;
+color: red;
 text-align: center;
 }
 
