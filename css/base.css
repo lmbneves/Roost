@@ -40,16 +40,22 @@ input {
   /* sets in foreground */
   font-family: "Roboto", sans-serif;
   font-weight: 400;
-  height: 55px;
+  height: 60px;
   margin-bottom: 20px;
   background-color: #fcfcfc; }
+  .navbar img {
+    float: left;
+    height: 50px;
+    width: 50px;
+    margin-top: 5px;
+    margin-left: 50px;
+    margin-right: -20px; }
   .navbar #nav {
     float: left;
     /* navbar links */ }
     .navbar #nav li {
       display: inline-block;
-      padding-right: 10px;
-      padding-left: 10px; }
+      padding-right: 20px; }
       .navbar #nav li a {
         text-decoration: none; }
   .navbar #register {

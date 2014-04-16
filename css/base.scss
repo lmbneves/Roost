@@ -50,10 +50,20 @@ input {
 
   font-family: $roboto;
   font-weight: 400;
-  height: 55px;
+  height: 60px;
   margin-bottom: 20px;
   
   background-color: $header-color;
+
+  img {
+    float: left;
+    height: 50px;
+    width: 50px;
+
+    margin-top: 5px;
+    margin-left: 50px;
+    margin-right: -20px;
+  }
 
   #nav {
     float: left;
@@ -61,8 +71,7 @@ input {
     /* navbar links */
     li {
       display: inline-block;
-      padding-right: 10px;
-      padding-left: 10px;
+      padding-right: 20px;
 
       a {
         text-decoration: none;
