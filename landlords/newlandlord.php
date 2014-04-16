@@ -1,7 +1,7 @@
 <?php
 	
 	//mysqli_connect("Hostname", "Username", "Password", "Database Name")
-	$connection = mysqli_connect("server74.web-hosting.com","urooxldw_lneves","house77","urooxldw_roost");
+	$connection = mysqli_connect(localhost,"urooxldw_lneves","house77","urooxldw_roost");
 
 	//Check for connection
 	if(mysqli_connect_errno()){
