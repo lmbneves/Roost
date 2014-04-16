@@ -46,33 +46,34 @@
 
     <!-- page content -->
     <div class="container">
-      <div class="search-form">
-        <span id="search-form-header">Roost</span>
+      <div class="panel panel-default" id="search-form">
+        <div class="panel-heading" id="roost"><h1 class="panel-title">Roost</h1></div>
+        <div class="panel-body">
+           <form>
+              <div class="input-group" id="homepage-search-buttons">
+                <!-- by number of bedrooms -->
+                  <span><button id="bedroom-button" class="btn btn-default" type="button">Bedrooms</button></span>
+                <!-- by price -->
+                  <span><button id="price-button" class="btn btn-default" type="button">Price</button></span>
+                <!-- by landlord -->
+                  <span><button id="landlord-button" class="btn btn-default" type="button">Landlord</button></span>
+                <!-- by distance from campus -->
+                  <span><button id="distance-button" class="btn btn-default" type="button">Distance</button></span>
+              </div><!-- input-group -->
 
-        <form>
-          <div class="input-group" id="homepage-search-buttons">
-            <!-- by number of bedrooms -->
-              <span><button id="bedroom-button" class="btn btn-default" type="button">Bedrooms</button></span>
-            <!-- by price -->
-              <span><button id="price-button" class="btn btn-default" type="button">Price</button></span>
-            <!-- by landlord -->
-              <span><button id="landlord-button" class="btn btn-default" type="button">Landlord</button></span>
-            <!-- by distance from campus -->
-              <span><button id="distance-button" class="btn btn-default" type="button">Distance</button></span>
-          </div><!-- input-group -->
+              <div class="input-group">
+                <input type="text" class="form-control" id="default-input" value="Find a nest..." rel="Find a nest..."><!-- default input -->
+                <input type="number" min="1" max="10" class="hidden" id="bedroom-input" value="Search by number of bedrooms..." rel="Search by number of bedrooms..."><!-- bedrooms input -->
+                <input type="number" class="hidden" id="price-input" value="Search by price..." rel="Search by price..."><!-- price input -->
+                <input type="text" class="hidden" id="landlord-input" value="Search by landlord..." rel="Search by landlord..."><!-- landlord input -->
+                <input type="text" class="hidden" id="distance-input" value="Search by distance from campus..." rel="Search by distance form campus..."><!-- distance input -->
 
-          <div class="input-group">
-            <input type="text" class="form-control" id="default-input" value="Find a nest..." rel="Find a nest..."><!-- default input -->
-            <input type="number" min="1" max="10" class="hidden" id="bedroom-input" value="Search by number of bedrooms..." rel="Search by number of bedrooms..."><!-- bedrooms input -->
-            <input type="number" class="hidden" id="price-input" value="Search by price..." rel="Search by price..."><!-- price input -->
-            <input type="text" class="hidden" id="landlord-input" value="Search by landlord..." rel="Search by landlord..."><!-- landlord input -->
-            <input type="text" class="hidden" id="distance-input" value="Search by distance from campus..." rel="Search by distance form campus..."><!-- distance input -->
-
-            <span class="input-group-btn">
-              <button class="btn btn-default" type="button">Search</button>
-            </span>
-          </div><!-- input-group -->
-        </form>
+                <span class="input-group-btn">
+                  <button class="btn btn-default" type="button">Search</button>
+                </span>
+              </div><!-- input-group -->
+            </form>
+        </div>
       </div>
     </div>
 
