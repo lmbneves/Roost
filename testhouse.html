@@ -65,58 +65,95 @@
     	<div class="name">
 			<h1>5 Menlo Place</h1>
 		</div>
+	<div class="left">
+	  <dl>
+	    <dt>5 Menlo Place</dt>
+	    <dt>Rochester, New York 14620</dt>
+	    <dt>5 bed, 2 full, 1 partial bathroom, 2767 square feet</dt>
+	  </dl>
+	      <!-- shitty code below beware! --> 
+	</div>
 		<div class="headinfo">
-			<h3>Pricing: ***** | Distance: *** | Utilities: *** | Neighborhood: **</h3>
 			<h3>Availability: YES</h3>
 		</div>
         <div id="map-canvas"></div>
-		<div class="bodyinfo">
-			<p>
-			Landlord: <a href="">x</a><br>
-			Cost: x<br>
-			Bedrooms: x | Bathrooms: x<br>
-			Distance from (School of choice): x<br>
-			Utilities: x<br>
-			Neighborhood: x<br>
-			</p>
-		</div>
-		
-		<!-- comments & ratings -->
-		<h2>COMMENTS & RATINGS</h2>
+		<!-- Property Information -->
+		<h2>Property Information</h2>
 		<div class="comments">
 			<div class="left">
 				<p>
-					Price: *****<br>
-					Distance: ***<br>
-					Utilities: ***<br>
-					Neighborhood: **
+				  <dl>
+				    <dt>Cost</dt>
+				    <dd>$300</dd>
+				    <dt>Bedrooms</dt>
+				    <dd>5</dd>
+				    <dt>Distance from School</dt>
+				    <dd>1.2 miles</dd>
+				    <dt>Utilities</dt>
+				    <dd>Heat and Electricity</dd>
+				    <dt>Neighborhood</dt>
+				    <dd>South Wedge</dd>
+				  </dl>
 				</p>
 			</div>
 			<div class="right">
 				<p>
-					much price<br>
-					such tame<br>
-					so convenient<br>
-					buy many land<br>
-					wow<br>
-					<br>
-					-<a href="">doge</a>
+				  <img border = "0" src= "profile.jpg" alt="Profile Nigga" width="175" height=
+		      "175"><br>
+				    Landlord: <a href="">John Smith</a>
 				</p>
 			</div>
 		</div>
+    <h2>Ratings and Comments</h2>
 		<div class="comments">
 			<div class="left">
-				<p>rating 2</p>
+				<p><strong>Average Score</strong>
+				<dl>
+				    <dt>Price:</dt>
+				    <dd><img border = "0" src= "Star.png" alt="Stars Nigga" width="20" height=
+		      "20">
+				    <img border = "0" src= "Star.png" alt="Stars Nigga" width="20" height=
+		      "20">
+				    <img border = "0" src= "Star.png" alt="Stars Nigga" width="20" height=
+		      "20">
+				    <img border = "0" src= "Star.png" alt="Stars Nigga" width="20" height=
+		      "20">
+				    <img border = "0" src= "Star.png" alt="Stars Nigga" width="20" height=
+		      "20"></dd>
+				    <dt>Distance:</dt>
+				    <dd><img border = "0" src= "Star.png" alt="Stars Nigga" width="20" height=
+		      "20">
+				    <img border = "0" src= "Star.png" alt="Stars Nigga" width="20" height=
+		      "20">
+				    <img border = "0" src= "Star.png" alt="Stars Nigga" width="20" height=
+		      "20"></dd>
+				    <dt>Utilities:</dt>
+				    <dd><img border = "0" src= "Star.png" alt="Stars Nigga" width="20" height=
+		      "20">
+				    <img border = "0" src= "Star.png" alt="Stars Nigga" width="20" height=
+		      "20">
+				    <img border = "0" src= "Star.png" alt="Stars Nigga" width="20" height=
+		      "20"></dd>
+				    <dt>Neighborhood</dt>
+				    <dd><img border = "0" src= "Star.png" alt="Stars Nigga" width="20" height=
+		      "20">
+				    <img border = "0" src= "Star.png" alt="Stars Nigga" width="20" height=
+		      "20"></dd>
+				  </dl>
+				</p>
 			</div>
 			<div class="right">
-				<p>comment 2</p>
+				<p><strong>Top Comment</strong></br>
+				Insert honest opinions here
+				</p>
 			</div>
 		</div>
 		
-		<!-- Your Comments & Ratings -->
+		<!-- Comments & Ratings -->
 		<br>
 		<fieldset>
-		<legend>YOUR COMMENTS & RATINGS:</legend>
+		<legend>COMMENTS & RATINGS:</legend>
+		<!-- not too sure what these values are here for...
 			<form action="">
 				<select name="price">
 					<option value="&le;5000">&le; $5000</option>
@@ -147,10 +184,11 @@
 					<option value="5">5</option>
 				</select>
 			</form>
-			<br>
-			<form name="input" action="" method="get">
-			Your Comment: <input type="text" name="Comment" value="Comment"><br>
-			<input type="submit" value="Submit">
+			<br>   -->
+			<form action="/html/tags/html_form_tag_action.cfm" method="post">
+			Comments:<br />
+			  <textarea name="comments" id="comments" rows="4" cols="100">Enter your comment here</textarea><br />
+			  <input type="submit" value="Submit" />
 			</form>
 		</fieldset>
     </div>
