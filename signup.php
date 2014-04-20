@@ -1,14 +1,6 @@
 <?php
-include_once 'includes/db_connect.php';
-include_once 'includes/functions.php';
- 
-sec_session_start();
- 
-if (login_check($mysqli) == true) {
-    $logged = 'in';
-} else {
-    $logged = 'out';
-}
+  include_once 'includes/signup.inc.php';
+  include_once 'includes/functions.php';
 ?>
 
 <!DOCTYPE html>
@@ -39,10 +31,6 @@ if (login_check($mysqli) == true) {
     <!-- =============== fonts =============== -->
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300,100,500' rel='stylesheet' type='text/css'>
 
-    <!-- =============== Javascript =============== -->
-    <script type="text/JavaScript" src="js/sha512.js"></script> 
-    <script type="text/JavaScript" src="js/forms.js"></script>
-
   </head>
 
   <body>
@@ -64,31 +52,42 @@ if (login_check($mysqli) == true) {
     <!-- page content -->
     <div class="container">
       <div class="panel panel-default">
-        <div class="panel-heading"><h2 class="panel-title">Login</h2></div>
+        <div class="panel-heading"><h2 class="panel-title">Sign Up</h2></div>
         <div class="panel-body">
+
         <?php
-        if (isset($_GET['error'])) {
-            echo '<p class="error">Error Logging In!</p>';
+        if (!empty($error_msg)) {
+            echo $error_msg;
         }
         ?>
 
-          <form action="includes/process_login.php" method="post" role="form" name="login_form">
+          <form action="<?php echo esc_url($_SERVER['PHP_SELF']); ?>" method="post" role="form" name="registration_form">
             <div class="form-group">
-              <label class="control-label">Email: </label>
-              <input type="text" class="form-control" name="email">
+              <label class="control-label">Username: </label>
+              <input type="text" class="form-control" name="username">
             </div>
             <div class="form-group">
               <label class="control-label">Password: </label>
               <input type="password" class="form-control" name="password">
             </div>
+            <div class="form-group">
+              <label class="control-label">Confirm Password: </label>
+              <input type="password" class="form-control" name="confirm_password">
+            </div>
+            <div class="form-group">
+              <label class="control-label">Email: </label>
+              <input type="text" class="form-control" name="email">
+            </div>
 
             <div class="input-group">
-              <input type="button" value="Login" onclick="formhash(this.form, this.form.password);" />
+              <input type="button" class="btn btn-default" onclick="return regformhash(this.form,
+                                   this.form.username,
+                                   this.form.email,
+                                   this.form.password,
+                                   this.form.confirmpwd);">Sign Up</button>
             </div>  
           </form>
-           <p>If you don't have a login, please <a href="register.php">register</a></p>
-            <p>If you are done, please <a href="includes/logout.php">log out</a>.</p>
-          <p>You are currently logged <?php echo $logged ?>.</p>
+
         </div>
       </div>
     </div>
