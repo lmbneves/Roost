@@ -1,3 +1,11 @@
+<?php
+$error = filter_input(INPUT_GET, 'err', $filter = FILTER_SANITIZE_STRING);
+ 
+if (! $error) {
+    $error = 'Oops! An unknown error happened.';
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -26,6 +34,10 @@
     <!-- =============== fonts =============== -->
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300,100,500' rel='stylesheet' type='text/css'>
 
+    <!-- =============== Javascript =============== -->
+    <script type="text/JavaScript" src="js/sha512.js"></script> 
+    <script type="text/JavaScript" src="js/forms.js"></script>
+
   </head>
 
   <body>
@@ -47,27 +59,9 @@
     <!-- page content -->
     <div class="container">
       <div class="panel panel-default">
-        <div class="panel-heading"><h2 class="panel-title">Login</h2></div>
-        <div class="panel-body">
-
-          <form action="login.php" method="post" role="form">
-            <div class="form-group">
-              <label class="control-label">Username: </label>
-              <input type="text" class="form-control" name="username">
-            </div>
-            <div class="form-group">
-              <label class="control-label">Password: </label>
-              <input type="password" class="form-control" name="password">
-            </div>
-
-            <div class="input-group">
-              <button type="submit">Sign In</button>
-            </div>  
-
-            <a href="forgotpassword.html">Forgot your password?</a>
-
-          </form>
-        </div>
+        <div class="panel-heading"><h2 class="panel-title">Error!</h2></div>
+        <p class="error"><?php echo $error; ?></p>  
+          <a href="index.html">Return to Home</a>
       </div>
     </div>
 

@@ -1,3 +1,8 @@
+<?php
+  include_once 'includes/signup.inc.php';
+  include_once 'includes/functions.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -50,7 +55,13 @@
         <div class="panel-heading"><h2 class="panel-title">Sign Up</h2></div>
         <div class="panel-body">
 
-          <form action="signup.php" method="post" role="form">
+        <?php
+        if (!empty($error_msg)) {
+            echo $error_msg;
+        }
+        ?>
+
+          <form action="<?php echo esc_url($_SERVER['PHP_SELF']); ?>" method="post" role="form" name="registration_form">
             <div class="form-group">
               <label class="control-label">Username: </label>
               <input type="text" class="form-control" name="username">
@@ -67,16 +78,16 @@
               <label class="control-label">Email: </label>
               <input type="text" class="form-control" name="email">
             </div>
-            <div class="form-group">
-              <label class="control-label">Confirm Email: </label>
-              <input type="text" class="form-control" name="confirm_email">
-            </div>
 
             <div class="input-group">
-              <button type="submit">Sign Up</button>
+              <input type="button" class="btn btn-default" onclick="return regformhash(this.form,
+                                   this.form.username,
+                                   this.form.email,
+                                   this.form.password,
+                                   this.form.confirmpwd);">Sign Up</button>
             </div>  
           </form>
-          
+
         </div>
       </div>
     </div>
