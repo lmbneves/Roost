@@ -71,7 +71,7 @@
 		$zipcode = mysql_real_escape_string($_POST['zipcode']);
 		$review = mysql_real_escape_string($_POST['review']);
 		$rating = mysql_real_escape_string($_POST['rating']);
-		$id = uniqid(rand(), true); //Creates uniqueid
+		$id = uniqid(rand(), true);
 
 		$sql = "INSERT INTO landlord (fname, lname, properties, phone, email, state, city, zipcode, id)
 				VALUES ('$firstname', '$lastname', '$known_properties', '$phone', '$email', '$state', '$city', '$zipcode', '$id')";

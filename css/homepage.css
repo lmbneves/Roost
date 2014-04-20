@@ -1,32 +1,41 @@
 /* ====================================
-   CSS FILE - HOMEPAGE
+   Constants/Variables
    ==================================== */
 /* ====================================
-   Base
+   Search Bar Section
    ==================================== */
-html {
-  /* loads and sets image at full-width full-height of window */
-  background: url(../images/darkblurredskyline.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover; }
+.search-area {
+  background-image: url(../darkimages/blurredskyline.jpg); }
 
-/* ====================================
-   Search Form
-   ==================================== */
-#search-form {
-  margin-top: 10%; }
-
-#roost {
-  text-align: center; }
-  #roost .panel-title {
-    font-size: 40pt; }
-
-#homepage-search-buttons {
+.form-group {
+  margin-left: auto;
   margin-right: auto;
-  margin-left: auto; }
-  #homepage-search-buttons span {
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    padding: 0px 50px 0px 50px; }
+  width: 90%; }
+
+.search-bar {
+  margin-top: 5%;
+  width: 40%; }
+
+#main-search {
+  min-width: 50%; }
+
+/* ====================================
+   Recent Houses Section
+   ==================================== */
+.recent {
+  background-color: white;
+  width: 100%;
+  position: fixed;
+  bottom: 145px; }
+  .recent #recent-title {
+    padding-left: 20px; }
+  .recent .recent-content {
+    padding-left: auto;
+    padding-right: auto; }
+  .recent .recent-house {
+    border: 1px solid #cccccc;
+    float: left;
+    padding: 20px;
+    margin: 20px;
+    width: 400px;
+    height: 300px; }

@@ -32,7 +32,7 @@
     <!-- top navbar -->
     <div class="super-container navbar" role="navigation">
         <ul id="nav">
-          <li><a href="../index.html">Roost</a></li>
+          <li><a href="index.html">Roost</a></li>
           <li><a href="">Home</a></li>
           <li><a href="">Browse</a></li>
         </ul>
@@ -132,7 +132,7 @@
       else return FALSE;
     }
 
-    if(checkSet() != FALSE && $_SERVER["REQUEST_METHOD"] == "POST") {
+    if(checkSet() != FALSE && $_SERVER["REQUEST_METHOD"] == "POST"){
 
       if(empty($_POST['address']) == FALSE && typeCheck($_POST['address'], 'string') != FALSE && 
           checkAddress($_POST['address']) != FALSE){
@@ -275,8 +275,10 @@
             echo 'New House Added!';
           }
         }  
-        else {
+
+        else{
           echo 'form not complete!';
+          echo $addressErr;
         }                               
     }
 

@@ -1,111 +1,54 @@
 /* ====================================
    Constants/Variables
    ==================================== */
-   $footer-height: 50px;
-   $header-color: darken(white, 1%);
-   $roboto: 'Roboto', sans-serif; // weights: 100, 300, 400, 500, 700
-   $background-color: #D6E8C0; // faint green
+html, body {
+  height: 100%;
+  background-color: #FFA672;
+  // padding-bottom: 70px; // so bottom navbar won't overlay body content
+  min-width: 1330px; // stops responsiveness
+  bottom: 0;
+}
 
 /* ====================================
-   Base
+   Top Navigation Bar
    ==================================== */
-html {
-	position: relative;
-	min-height: 100%;
-	margin: 0;
-  font-family: sans-serif;
-  background-color: $background-color;
-  min-width: 900px;
+.navbar-wrapper {
+  background-color: white;
+  height: 80px; 
+  position: relative;
+  z-index: 1000;
 }
 
-body {
-	margin: 0;
-	margin-bottom: $footer-height;
+.navbar { // houses, landlords
+  float: left;
+  margin: 10px;
 }
 
-input {
-  font-style: italic;
-}
-
-/* important for input addons */
-* {
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
-}
-*:before,
-*:after {
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-
-/* ====================================
-   Header Navigation Bar
-   ==================================== */
-.navbar {
-	margin: 0;
-  z-index: 1000; /* sets in foreground */
-
-  font-family: $roboto;
-  font-weight: 400;
+#nav img { // logo
   height: 60px;
-  margin-bottom: 20px;
-  
-  background-color: $header-color;
+  width: 60px;
+}
 
-  img {
-    float: left;
-    height: 50px;
-    width: 50px;
-
-    margin-top: 5px;
-    margin-left: 50px;
-    margin-right: -20px;
-  }
-
-  #nav {
-    float: left;
-
-    /* navbar links */
-    li {
-      display: inline-block;
-      padding-right: 20px;
-
-      a {
-        text-decoration: none;
-      }
-    }
-  }
-
-  #register {
-    float: right;
-    margin-right: 40px;
-
-    /* sign up/in links */
-    li {
-      display: inline-block;
-      padding-right: 10px;
-      padding-left: 10px;
-
-      a {
-        text-decoration: none;
-      }
-    }
-  }
+.sign-in-up { // sign in | up
+  float: right;
+  padding-top: 30px;
 }
 
 /* ====================================
-   Footer
+   Footer Section
    ==================================== */
 .footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  margin-top: 20px;
+  background-color: darken(white, 10%);
 
-  /* fixed footer height and color */  
-  height: $footer-height;
-  background-color: $header-color;
+  #blurb {
+    float: left;
+  }
+
+  #contact {
+    float: right;
+  }
+}
+
+.footer, .push {
+  height: 80px;
 }
