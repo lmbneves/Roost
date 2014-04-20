@@ -1,0 +1,111 @@
+/* ====================================
+   Constants/Variables
+   ==================================== */
+   $footer-height: 50px;
+   $header-color: darken(white, 1%);
+   $roboto: 'Roboto', sans-serif; // weights: 100, 300, 400, 500, 700
+   $background-color: #D6E8C0; // faint green
+
+/* ====================================
+   Base
+   ==================================== */
+html {
+	position: relative;
+	min-height: 100%;
+	margin: 0;
+  font-family: sans-serif;
+  background-color: $background-color;
+  min-width: 900px;
+}
+
+body {
+	margin: 0;
+	margin-bottom: $footer-height;
+}
+
+input {
+  font-style: italic;
+}
+
+/* important for input addons */
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+
+/* ====================================
+   Header Navigation Bar
+   ==================================== */
+.navbar {
+	margin: 0;
+  z-index: 1000; /* sets in foreground */
+
+  font-family: $roboto;
+  font-weight: 400;
+  height: 60px;
+  margin-bottom: 20px;
+  
+  background-color: $header-color;
+
+  img {
+    float: left;
+    height: 50px;
+    width: 50px;
+
+    margin-top: 5px;
+    margin-left: 50px;
+    margin-right: -20px;
+  }
+
+  #nav {
+    float: left;
+
+    /* navbar links */
+    li {
+      display: inline-block;
+      padding-right: 20px;
+
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+
+  #register {
+    float: right;
+    margin-right: 40px;
+
+    /* sign up/in links */
+    li {
+      display: inline-block;
+      padding-right: 10px;
+      padding-left: 10px;
+
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+/* ====================================
+   Footer
+   ==================================== */
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  margin-top: 20px;
+
+  /* fixed footer height and color */  
+  height: $footer-height;
+  background-color: $header-color;
+}
