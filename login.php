@@ -47,19 +47,31 @@ if (login_check($mysqli) == true) {
 
   <body>
 
-    <!-- top navbar -->
-    <div class="super-container navbar" role="navigation">
-      <a href="index.html"><img src="images/icons/logo.svg"></a>
-        <ul id="nav">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="BrowseSection.html">Browse</a></li>
-        </ul>
-        <ul id="register">
-          <li><a href="login.html">Sign in</a></li>
-          <li>|</li>
-          <li><a href="signup.html">Sign up</a></li>
-        </ul>
-    </div>
+      <!-- top navigation bar -->
+    <div class="super-container navbar-wrapper">
+      <nav class="container">
+        <div class="navbar" role="navigation">
+          <ul id="nav" class="list-inline list-unstyled">
+            <li><a href=""><img src="icons/logo.gif"></a></li>
+            <li><a href="">Houses</a></li>
+            <li><a href="">Landlords</a></li>
+          </ul>
+        </div>
+
+        <div class="sign-in-up">
+
+          <ul id="sign" class="list-inline list-unstyled">
+          <?php if (login_check($mysqli) == true) : ?>
+            <li><p>Welcome  <?php echo htmlentities($_SESSION['username']); ?>!</p></li>
+            <li><a href="includes/logout.php">Logout</a></li>
+          <?php else : ?>
+            <li><a href="signup.php">Sign Up</a></li>
+            <li> <a href="login.php">Sign In</a></li>
+           <?php endif; ?>  
+          </ul>
+        </div>
+      </nav>
+    </div><!-- top navigation bar, super-container -->
 
     <!-- page content -->
     <div class="container">
@@ -71,6 +83,7 @@ if (login_check($mysqli) == true) {
             echo '<p class="error">Error Logging In!</p>';
         }
         ?>
+        <?php echo $loginErr?>
 
           <form action="includes/process_login.php" method="post" role="form" name="login_form">
             <div class="form-group">
@@ -86,9 +99,7 @@ if (login_check($mysqli) == true) {
               <input type="button" value="Login" onclick="formhash(this.form, this.form.password);" />
             </div>  
           </form>
-           <p>If you don't have a login, please <a href="register.php">register</a></p>
-            <p>If you are done, please <a href="includes/logout.php">log out</a>.</p>
-          <p>You are currently logged <?php echo $logged ?>.</p>
+           <p>Don't have an account? <a href="signup.php">Register Now</a></p>
         </div>
       </div>
     </div>
