@@ -1,3 +1,10 @@
+<?php
+include_once '../includes/db_connect.php';
+include_once '../includes/functions.php';
+ 
+sec_session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -29,19 +36,31 @@
 
   <body>
 
-    <!-- top navbar -->
-    <div class="super-container navbar" role="navigation">
-        <ul id="nav">
-          <li><a href="index.html">Roost</a></li>
-          <li><a href="">Home</a></li>
-          <li><a href="">Browse</a></li>
-        </ul>
-        <ul id="register">
-          <li><a href="">Sign in</a></li>
-          <li>|</li>
-          <li><a href="">Sign up</a></li>
-        </ul>
-    </div>
+    <!-- top navigation bar -->
+    <div class="super-container navbar-wrapper">
+      <nav class="container">
+        <div class="navbar" role="navigation">
+          <ul id="nav" class="list-inline list-unstyled">
+            <li><a href=""><img src="../icons/logo.gif"></a></li>
+            <li><a href="">Houses</a></li>
+            <li><a href="">Landlords</a></li>
+          </ul>
+        </div>
+
+        <div class="sign-in-up">
+
+          <ul id="sign" class="list-inline list-unstyled">
+          <?php if (login_check($mysqli) == true) : ?>
+            <li><p>Welcome  <?php echo htmlentities($_SESSION['username']); ?>!</p></li>
+            <li><a href="includes/logout.php">Logout</a></li>
+          <?php else : ?>
+            <li><a href="signup.php">Sign Up</a></li>
+            <li> <a href="login.php">Sign In</a></li>
+           <?php endif; ?>  
+          </ul>
+        </div>
+      </nav>
+    </div><!-- top navigation bar, super-container -->
 
     <!-- PHP Code -->
 
@@ -69,8 +88,8 @@
     }
 
     function checkSet(){
-      return isset($_POST['name'], $_POST['phone'], $_POST['email'], 
-                  $_POST['state'], $_POST['city'], $_POST['zipcode'], $_POST['known_properties']);
+      return isset($_POST['firstname'], $_POST['lastname'], $_POST['phone'], $_POST['email'], 
+                  $_POST['state'], $_POST['city'], $_POST['zipcode']);
     }
 
     function checkZip($zip){
@@ -89,15 +108,22 @@
 
         //Ensuring that all forms are filled out correctly
 
-        if(empty($_POST['name']) == FALSE && typeCheck($_POST['name'], 'string') != FALSE){
-          $name = explode(" ", $_POST['name']);
-          $firstname = $name[0];
-          $lastname = $name[1];
-          $name_complete = TRUE;
+        if(empty($_POST['firstname']) == FALSE && typeCheck($_POST['firstname'], 'string') != FALSE){
+          $firstname = $_POST['firstname'];
+          $firstname_complete = TRUE;
         }
         else{
-          $nameErr = "Please enter the landlord's name!";
-          $name_complete = FALSE;
+          $firstnameErr = "Please enter the landlord's first name!";
+          $firstname_complete = FALSE;
+        }
+
+        if(empty($_POST['lastname']) == FALSE && typeCheck($_POST['lastname'], 'string') != FALSE){
+          $lastname = $_POST['lastname'];
+          $lastname_complete = TRUE;
+        }
+        else{
+          $lastnameErr = "Please enter the landlord's last name!";
+          $lastname_complete = FALSE;
         }
 
         if(empty($_POST['phone']) == FALSE && typeCheck($_POST['phone'], 'string') != FALSE){
@@ -105,7 +131,7 @@
           $phone_complete = TRUE;
         }
         else{
-          $phoneErr "Please enter the landlord's phone number!";
+          $phoneErr = "Please enter the landlord's phone number!";
           $phone_complete = FALSE;
         }
 
@@ -148,7 +174,7 @@
 
         $id = uniqid(rand(), true);
 
-        if($name_complete and $phone_complete and $email_complete and $state_complete and $city_complete and $zipcode_complete){ 
+        if($firstname_complete and $lastname_complete and $phone_complete and $email_complete and $state_complete and $city_complete and $zipcode_complete){ 
 
           //Connect to mysql server
           $connect = mysql_connect('localhost', 'urooxldw_lneves', 'houses77')
@@ -177,14 +203,15 @@
             exit();
           }
           else{
-            echo 'New Landlord added to the database!';
+            echo "<script>window.location = 'http://www.uroost.org/landlords/landlord_success.php'</script>";
           }
-        }  
+        }
       }
+      
       else{
-        echo 'Form not complete!';
+        //echo "<script>window.location = 'http://www.uroost.org/landlords/landlord_success.php'</script>";
       }
-
+      
     ?>
 
     <!-- page content -->
@@ -195,9 +222,14 @@
 
           <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="post" role="form">
             <div class="form-group">
-              <label class="control-label">Name: </label>
-              <span class="has-error"><?php echo $nameErr;?>
-              <input type="text" class="form-control" name="name">
+              <label class="control-label">First Name: </label>
+              <span class="has-error"><?php echo $firstnameErr;?>
+              <input type="text" class="form-control" name="firstname">
+            </div>
+            <div class="form-group">
+              <label class="control-label">Last Name: </label>
+              <span class="has-error"><?php echo $lastnameErr;?>
+              <input type="text" class="form-control" name="lastname">
             </div>
             <div class="form-group">
               <label class="control-label">Phone Number: </label>
