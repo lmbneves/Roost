@@ -1,3 +1,10 @@
+<?php
+include_once 'includes/db_connect.php';
+include_once 'includes/functions.php';
+ 
+sec_session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -37,9 +44,15 @@
         </div>
 
         <div class="sign-in-up">
+
           <ul id="sign" class="list-inline list-unstyled">
-            <li><a href="">Sign Up</a></li>
-            <li><a href="">Sign In</a></li>
+          <?php if (login_check($mysqli) == true) : ?>
+            <li><p>Welcome  <?php echo htmlentities($_SESSION['username']); ?>!</p></li>
+            <li><a href="includes/logout.php">Logout</a></li>
+          <?php else : ?>
+            <li><a href="signup.php">Sign Up</a></li>
+            <li> <a href="login.php">Sign In</a></li>
+           <?php endif; ?>  
           </ul>
         </div>
       </nav>
