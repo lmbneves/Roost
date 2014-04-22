@@ -1,0 +1,95 @@
+[15-Apr-2014 16:05:28 America/New_York] PHP Warning:  mysqli_connect() [<a href='function.mysqli-connect'>function.mysqli-connect</a>]: (28000/1045): Access denied for user 'urooxldw_lneves'@'localhost' (using password: YES) in /home/urooxldw/public_html/landlords/newlandlord.php on line 4
+[15-Apr-2014 16:05:28 America/New_York] PHP Warning:  mysqli_real_escape_string() expects exactly 2 parameters, 1 given in /home/urooxldw/public_html/landlords/newlandlord.php on line 12
+[15-Apr-2014 16:05:28 America/New_York] PHP Warning:  mysqli_real_escape_string() expects exactly 2 parameters, 1 given in /home/urooxldw/public_html/landlords/newlandlord.php on line 13
+[15-Apr-2014 16:05:28 America/New_York] PHP Warning:  mysqli_real_escape_string() expects exactly 2 parameters, 1 given in /home/urooxldw/public_html/landlords/newlandlord.php on line 14
+[15-Apr-2014 16:05:28 America/New_York] PHP Warning:  mysqli_real_escape_string() expects exactly 2 parameters, 1 given in /home/urooxldw/public_html/landlords/newlandlord.php on line 15
+[15-Apr-2014 16:05:28 America/New_York] PHP Warning:  mysqli_real_escape_string() expects exactly 2 parameters, 1 given in /home/urooxldw/public_html/landlords/newlandlord.php on line 16
+[15-Apr-2014 16:05:28 America/New_York] PHP Warning:  mysqli_real_escape_string() expects exactly 2 parameters, 1 given in /home/urooxldw/public_html/landlords/newlandlord.php on line 17
+[15-Apr-2014 16:05:28 America/New_York] PHP Warning:  mysqli_real_escape_string() expects exactly 2 parameters, 1 given in /home/urooxldw/public_html/landlords/newlandlord.php on line 18
+[15-Apr-2014 16:05:28 America/New_York] PHP Warning:  mysqli_real_escape_string() expects exactly 2 parameters, 1 given in /home/urooxldw/public_html/landlords/newlandlord.php on line 19
+[15-Apr-2014 16:05:28 America/New_York] PHP Warning:  mysqli_real_escape_string() expects exactly 2 parameters, 1 given in /home/urooxldw/public_html/landlords/newlandlord.php on line 20
+[15-Apr-2014 16:05:28 America/New_York] PHP Warning:  mysqli_real_escape_string() expects exactly 2 parameters, 1 given in /home/urooxldw/public_html/landlords/newlandlord.php on line 21
+[15-Apr-2014 16:05:28 America/New_York] PHP Warning:  mysql_query() expects parameter 2 to be resource, string given in /home/urooxldw/public_html/landlords/newlandlord.php on line 26
+[15-Apr-2014 16:05:28 America/New_York] PHP Warning:  mysql_error() expects parameter 1 to be resource, null given in /home/urooxldw/public_html/landlords/newlandlord.php on line 27
+[15-Apr-2014 16:08:03 America/New_York] PHP Warning:  mysqli_connect() [<a href='function.mysqli-connect'>function.mysqli-connect</a>]: (42000/1044): Access denied for user 'urooxldw_lneves'@'localhost' to database 'urooxldw_roost' in /home/urooxldw/public_html/landlords/newlandlord.php on line 4
+[15-Apr-2014 16:08:03 America/New_York] PHP Warning:  mysqli_real_escape_string() expects exactly 2 parameters, 1 given in /home/urooxldw/public_html/landlords/newlandlord.php on line 12
+[15-Apr-2014 16:08:03 America/New_York] PHP Warning:  mysqli_real_escape_string() expects exactly 2 parameters, 1 given in /home/urooxldw/public_html/landlords/newlandlord.php on line 13
+[15-Apr-2014 16:08:03 America/New_York] PHP Warning:  mysqli_real_escape_string() expects exactly 2 parameters, 1 given in /home/urooxldw/public_html/landlords/newlandlord.php on line 14
+[15-Apr-2014 16:08:03 America/New_York] PHP Warning:  mysqli_real_escape_string() expects exactly 2 parameters, 1 given in /home/urooxldw/public_html/landlords/newlandlord.php on line 15
+[15-Apr-2014 16:08:03 America/New_York] PHP Warning:  mysqli_real_escape_string() expects exactly 2 parameters, 1 given in /home/urooxldw/public_html/landlords/newlandlord.php on line 16
+[15-Apr-2014 16:08:03 America/New_York] PHP Warning:  mysqli_real_escape_string() expects exactly 2 parameters, 1 given in /home/urooxldw/public_html/landlords/newlandlord.php on line 17
+[15-Apr-2014 16:08:03 America/New_York] PHP Warning:  mysqli_real_escape_string() expects exactly 2 parameters, 1 given in /home/urooxldw/public_html/landlords/newlandlord.php on line 18
+[15-Apr-2014 16:08:03 America/New_York] PHP Warning:  mysqli_real_escape_string() expects exactly 2 parameters, 1 given in /home/urooxldw/public_html/landlords/newlandlord.php on line 19
+[15-Apr-2014 16:08:03 America/New_York] PHP Warning:  mysqli_real_escape_string() expects exactly 2 parameters, 1 given in /home/urooxldw/public_html/landlords/newlandlord.php on line 20
+[15-Apr-2014 16:08:03 America/New_York] PHP Warning:  mysqli_real_escape_string() expects exactly 2 parameters, 1 given in /home/urooxldw/public_html/landlords/newlandlord.php on line 21
+[15-Apr-2014 16:08:03 America/New_York] PHP Warning:  mysql_query() expects parameter 2 to be resource, string given in /home/urooxldw/public_html/landlords/newlandlord.php on line 26
+[15-Apr-2014 16:08:03 America/New_York] PHP Warning:  mysql_error() expects parameter 1 to be resource, null given in /home/urooxldw/public_html/landlords/newlandlord.php on line 27
+[15-Apr-2014 16:08:09 America/New_York] PHP Warning:  mysqli_connect() [<a href='function.mysqli-connect'>function.mysqli-connect</a>]: (42000/1044): Access denied for user 'urooxldw_lneves'@'localhost' to database 'urooxldw_roost' in /home/urooxldw/public_html/landlords/newlandlord.php on line 4
+[15-Apr-2014 16:08:09 America/New_York] PHP Warning:  mysqli_real_escape_string() expects exactly 2 parameters, 1 given in /home/urooxldw/public_html/landlords/newlandlord.php on line 12
+[15-Apr-2014 16:08:09 America/New_York] PHP Warning:  mysqli_real_escape_string() expects exactly 2 parameters, 1 given in /home/urooxldw/public_html/landlords/newlandlord.php on line 13
+[15-Apr-2014 16:08:09 America/New_York] PHP Warning:  mysqli_real_escape_string() expects exactly 2 parameters, 1 given in /home/urooxldw/public_html/landlords/newlandlord.php on line 14
+[15-Apr-2014 16:08:09 America/New_York] PHP Warning:  mysqli_real_escape_string() expects exactly 2 parameters, 1 given in /home/urooxldw/public_html/landlords/newlandlord.php on line 15
+[15-Apr-2014 16:08:09 America/New_York] PHP Warning:  mysqli_real_escape_string() expects exactly 2 parameters, 1 given in /home/urooxldw/public_html/landlords/newlandlord.php on line 16
+[15-Apr-2014 16:08:09 America/New_York] PHP Warning:  mysqli_real_escape_string() expects exactly 2 parameters, 1 given in /home/urooxldw/public_html/landlords/newlandlord.php on line 17
+[15-Apr-2014 16:08:09 America/New_York] PHP Warning:  mysqli_real_escape_string() expects exactly 2 parameters, 1 given in /home/urooxldw/public_html/landlords/newlandlord.php on line 18
+[15-Apr-2014 16:08:09 America/New_York] PHP Warning:  mysqli_real_escape_string() expects exactly 2 parameters, 1 given in /home/urooxldw/public_html/landlords/newlandlord.php on line 19
+[15-Apr-2014 16:08:09 America/New_York] PHP Warning:  mysqli_real_escape_string() expects exactly 2 parameters, 1 given in /home/urooxldw/public_html/landlords/newlandlord.php on line 20
+[15-Apr-2014 16:08:09 America/New_York] PHP Warning:  mysqli_real_escape_string() expects exactly 2 parameters, 1 given in /home/urooxldw/public_html/landlords/newlandlord.php on line 21
+[15-Apr-2014 16:08:09 America/New_York] PHP Warning:  mysql_query() expects parameter 2 to be resource, string given in /home/urooxldw/public_html/landlords/newlandlord.php on line 26
+[15-Apr-2014 16:08:09 America/New_York] PHP Warning:  mysql_error() expects parameter 1 to be resource, null given in /home/urooxldw/public_html/landlords/newlandlord.php on line 27
+[15-Apr-2014 16:08:22 America/New_York] PHP Warning:  mysqli_connect() [<a href='function.mysqli-connect'>function.mysqli-connect</a>]: (42000/1044): Access denied for user 'urooxldw_lneves'@'localhost' to database 'urooxldw_roost' in /home/urooxldw/public_html/landlords/newlandlord.php on line 4
+[15-Apr-2014 16:08:22 America/New_York] PHP Warning:  mysqli_real_escape_string() expects exactly 2 parameters, 1 given in /home/urooxldw/public_html/landlords/newlandlord.php on line 12
+[15-Apr-2014 16:08:22 America/New_York] PHP Warning:  mysqli_real_escape_string() expects exactly 2 parameters, 1 given in /home/urooxldw/public_html/landlords/newlandlord.php on line 13
+[15-Apr-2014 16:08:22 America/New_York] PHP Warning:  mysqli_real_escape_string() expects exactly 2 parameters, 1 given in /home/urooxldw/public_html/landlords/newlandlord.php on line 14
+[15-Apr-2014 16:08:22 America/New_York] PHP Warning:  mysqli_real_escape_string() expects exactly 2 parameters, 1 given in /home/urooxldw/public_html/landlords/newlandlord.php on line 15
+[15-Apr-2014 16:08:22 America/New_York] PHP Warning:  mysqli_real_escape_string() expects exactly 2 parameters, 1 given in /home/urooxldw/public_html/landlords/newlandlord.php on line 16
+[15-Apr-2014 16:08:22 America/New_York] PHP Warning:  mysqli_real_escape_string() expects exactly 2 parameters, 1 given in /home/urooxldw/public_html/landlords/newlandlord.php on line 17
+[15-Apr-2014 16:08:22 America/New_York] PHP Warning:  mysqli_real_escape_string() expects exactly 2 parameters, 1 given in /home/urooxldw/public_html/landlords/newlandlord.php on line 18
+[15-Apr-2014 16:08:22 America/New_York] PHP Warning:  mysqli_real_escape_string() expects exactly 2 parameters, 1 given in /home/urooxldw/public_html/landlords/newlandlord.php on line 19
+[15-Apr-2014 16:08:22 America/New_York] PHP Warning:  mysqli_real_escape_string() expects exactly 2 parameters, 1 given in /home/urooxldw/public_html/landlords/newlandlord.php on line 20
+[15-Apr-2014 16:08:22 America/New_York] PHP Warning:  mysqli_real_escape_string() expects exactly 2 parameters, 1 given in /home/urooxldw/public_html/landlords/newlandlord.php on line 21
+[15-Apr-2014 16:08:22 America/New_York] PHP Warning:  mysql_query() expects parameter 2 to be resource, string given in /home/urooxldw/public_html/landlords/newlandlord.php on line 26
+[15-Apr-2014 16:08:22 America/New_York] PHP Warning:  mysql_error() expects parameter 1 to be resource, null given in /home/urooxldw/public_html/landlords/newlandlord.php on line 27
+[15-Apr-2014 16:16:53 America/New_York] PHP Warning:  mysqli_real_escape_string() expects exactly 2 parameters, 1 given in /home/urooxldw/public_html/landlords/newlandlord.php on line 17
+[15-Apr-2014 16:16:53 America/New_York] PHP Warning:  mysqli_real_escape_string() expects exactly 2 parameters, 1 given in /home/urooxldw/public_html/landlords/newlandlord.php on line 18
+[15-Apr-2014 16:16:53 America/New_York] PHP Warning:  mysqli_real_escape_string() expects exactly 2 parameters, 1 given in /home/urooxldw/public_html/landlords/newlandlord.php on line 19
+[15-Apr-2014 16:16:53 America/New_York] PHP Warning:  mysqli_real_escape_string() expects exactly 2 parameters, 1 given in /home/urooxldw/public_html/landlords/newlandlord.php on line 20
+[15-Apr-2014 16:16:53 America/New_York] PHP Warning:  mysqli_real_escape_string() expects exactly 2 parameters, 1 given in /home/urooxldw/public_html/landlords/newlandlord.php on line 21
+[15-Apr-2014 16:16:53 America/New_York] PHP Warning:  mysqli_real_escape_string() expects exactly 2 parameters, 1 given in /home/urooxldw/public_html/landlords/newlandlord.php on line 22
+[15-Apr-2014 16:16:53 America/New_York] PHP Warning:  mysqli_real_escape_string() expects exactly 2 parameters, 1 given in /home/urooxldw/public_html/landlords/newlandlord.php on line 23
+[15-Apr-2014 16:16:53 America/New_York] PHP Warning:  mysqli_real_escape_string() expects exactly 2 parameters, 1 given in /home/urooxldw/public_html/landlords/newlandlord.php on line 24
+[15-Apr-2014 16:16:53 America/New_York] PHP Warning:  mysqli_real_escape_string() expects exactly 2 parameters, 1 given in /home/urooxldw/public_html/landlords/newlandlord.php on line 25
+[15-Apr-2014 16:16:53 America/New_York] PHP Warning:  mysqli_real_escape_string() expects exactly 2 parameters, 1 given in /home/urooxldw/public_html/landlords/newlandlord.php on line 26
+[15-Apr-2014 16:16:53 America/New_York] PHP Warning:  mysql_query() expects parameter 2 to be resource, string given in /home/urooxldw/public_html/landlords/newlandlord.php on line 31
+[15-Apr-2014 16:16:53 America/New_York] PHP Warning:  mysql_error() expects parameter 1 to be resource, null given in /home/urooxldw/public_html/landlords/newlandlord.php on line 32
+[15-Apr-2014 16:18:03 America/New_York] PHP Warning:  mysqli_connect() [<a href='function.mysqli-connect'>function.mysqli-connect</a>]: (42000/1044): Access denied for user 'urooxldw_lneves'@'localhost' to database 'urooxldw_roost' in /home/urooxldw/public_html/landlords/newlandlord.php on line 3
+[15-Apr-2014 16:18:39 America/New_York] PHP Warning:  mysqli_real_escape_string() expects exactly 2 parameters, 1 given in /home/urooxldw/public_html/landlords/newlandlord.php on line 17
+[15-Apr-2014 16:18:39 America/New_York] PHP Warning:  mysqli_real_escape_string() expects exactly 2 parameters, 1 given in /home/urooxldw/public_html/landlords/newlandlord.php on line 18
+[15-Apr-2014 16:18:39 America/New_York] PHP Warning:  mysqli_real_escape_string() expects exactly 2 parameters, 1 given in /home/urooxldw/public_html/landlords/newlandlord.php on line 19
+[15-Apr-2014 16:18:39 America/New_York] PHP Warning:  mysqli_real_escape_string() expects exactly 2 parameters, 1 given in /home/urooxldw/public_html/landlords/newlandlord.php on line 20
+[15-Apr-2014 16:18:39 America/New_York] PHP Warning:  mysqli_real_escape_string() expects exactly 2 parameters, 1 given in /home/urooxldw/public_html/landlords/newlandlord.php on line 21
+[15-Apr-2014 16:18:39 America/New_York] PHP Warning:  mysqli_real_escape_string() expects exactly 2 parameters, 1 given in /home/urooxldw/public_html/landlords/newlandlord.php on line 22
+[15-Apr-2014 16:18:39 America/New_York] PHP Warning:  mysqli_real_escape_string() expects exactly 2 parameters, 1 given in /home/urooxldw/public_html/landlords/newlandlord.php on line 23
+[15-Apr-2014 16:18:39 America/New_York] PHP Warning:  mysqli_real_escape_string() expects exactly 2 parameters, 1 given in /home/urooxldw/public_html/landlords/newlandlord.php on line 24
+[15-Apr-2014 16:18:39 America/New_York] PHP Warning:  mysqli_real_escape_string() expects exactly 2 parameters, 1 given in /home/urooxldw/public_html/landlords/newlandlord.php on line 25
+[15-Apr-2014 16:18:39 America/New_York] PHP Warning:  mysqli_real_escape_string() expects exactly 2 parameters, 1 given in /home/urooxldw/public_html/landlords/newlandlord.php on line 26
+[15-Apr-2014 16:18:39 America/New_York] PHP Warning:  mysql_query() expects parameter 2 to be resource, string given in /home/urooxldw/public_html/landlords/newlandlord.php on line 31
+[15-Apr-2014 16:18:39 America/New_York] PHP Warning:  mysql_error() expects parameter 1 to be resource, null given in /home/urooxldw/public_html/landlords/newlandlord.php on line 32
+[15-Apr-2014 16:21:24 America/New_York] PHP Warning:  mysqli_real_escape_string() expects exactly 2 parameters, 1 given in /home/urooxldw/public_html/landlords/newlandlord.php on line 19
+[15-Apr-2014 16:21:24 America/New_York] PHP Warning:  mysqli_real_escape_string() expects exactly 2 parameters, 1 given in /home/urooxldw/public_html/landlords/newlandlord.php on line 20
+[15-Apr-2014 16:21:24 America/New_York] PHP Warning:  mysqli_real_escape_string() expects exactly 2 parameters, 1 given in /home/urooxldw/public_html/landlords/newlandlord.php on line 21
+[15-Apr-2014 16:21:24 America/New_York] PHP Warning:  mysqli_real_escape_string() expects exactly 2 parameters, 1 given in /home/urooxldw/public_html/landlords/newlandlord.php on line 22
+[15-Apr-2014 16:21:24 America/New_York] PHP Warning:  mysqli_real_escape_string() expects exactly 2 parameters, 1 given in /home/urooxldw/public_html/landlords/newlandlord.php on line 23
+[15-Apr-2014 16:21:24 America/New_York] PHP Warning:  mysqli_real_escape_string() expects exactly 2 parameters, 1 given in /home/urooxldw/public_html/landlords/newlandlord.php on line 24
+[15-Apr-2014 16:21:24 America/New_York] PHP Warning:  mysqli_real_escape_string() expects exactly 2 parameters, 1 given in /home/urooxldw/public_html/landlords/newlandlord.php on line 25
+[15-Apr-2014 16:21:24 America/New_York] PHP Warning:  mysqli_real_escape_string() expects exactly 2 parameters, 1 given in /home/urooxldw/public_html/landlords/newlandlord.php on line 26
+[15-Apr-2014 16:21:24 America/New_York] PHP Warning:  mysqli_real_escape_string() expects exactly 2 parameters, 1 given in /home/urooxldw/public_html/landlords/newlandlord.php on line 27
+[15-Apr-2014 16:21:24 America/New_York] PHP Warning:  mysqli_real_escape_string() expects exactly 2 parameters, 1 given in /home/urooxldw/public_html/landlords/newlandlord.php on line 28
+[15-Apr-2014 16:21:24 America/New_York] PHP Warning:  mysql_query() expects parameter 2 to be resource, string given in /home/urooxldw/public_html/landlords/newlandlord.php on line 33
+[15-Apr-2014 16:21:24 America/New_York] PHP Warning:  mysql_error() expects parameter 1 to be resource, null given in /home/urooxldw/public_html/landlords/newlandlord.php on line 34
+[15-Apr-2014 16:29:24 America/New_York] PHP Parse error:  syntax error, unexpected T_IF in /home/urooxldw/public_html/landlords/newlandlord.php on line 6
+[15-Apr-2014 16:30:20 America/New_York] PHP Parse error:  syntax error, unexpected T_IF in /home/urooxldw/public_html/landlords/newlandlord.php on line 6
+[15-Apr-2014 16:31:34 America/New_York] PHP Parse error:  syntax error, unexpected T_IF in /home/urooxldw/public_html/landlords/newlandlord.php on line 11
+[15-Apr-2014 16:35:58 America/New_York] PHP Warning:  mysql_connect() [<a href='function.mysql-connect'>function.mysql-connect</a>]: Access denied for user 'urooxldw_lneves'@'localhost' (using password: YES) in /home/urooxldw/public_html/landlords/newlandlord.php on line 4
+[15-Apr-2014 16:57:12 America/New_York] PHP Warning:  mysql_query() expects parameter 2 to be resource, string given in /home/urooxldw/public_html/landlords/newlandlord.php on line 37
+[15-Apr-2014 16:57:12 America/New_York] PHP Warning:  mysql_error() expects parameter 1 to be resource, null given in /home/urooxldw/public_html/landlords/newlandlord.php on line 38
