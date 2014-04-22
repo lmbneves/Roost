@@ -1,13 +1,5 @@
 Roost
 =====
 
-A House Listing and Rating Service
-
-##Authors
-- **Evan Basta**
-- **Luisa Maria Neves**
-- **Kedar Shashidar** 
-- **Louise Yi Lu**
-- **Sangcheon Lee** 
-- **Ruby Reynoso**
-- **Christopher Wong**
+CSC210 Final Project - A House Listing and Rating Service
+by Luisa Maria Neves, Kedar Shashidar, Louise Yi Lu, Sangcheon Lee, Ruby Reynoso, and Christopher Wong
