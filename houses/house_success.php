@@ -55,8 +55,8 @@ sec_session_start();
             <li><p>Welcome  <?php echo htmlentities($_SESSION['username']); ?>!</p></li>
             <li><a href="includes/logout.php">Logout</a></li>
           <?php else : ?>
-            <li><a href="signup.php">Sign Up</a></li>
-            <li> <a href="login.php">Sign In</a></li>
+            <li><a href="../signup.php">Sign Up</a></li>
+            <li> <a href="../login.php">Sign In</a></li>
            <?php endif; ?>  
           </ul>
         </div>
@@ -66,14 +66,14 @@ sec_session_start();
     <!-- page content -->
     <div class="container">
       <div class="panel panel-default success_panel top_margin">
-        <div class="panel-heading"><h2 class="panel-title">Added New Landlord!</h2></div>
+        <div class="panel-heading"><h2 class="panel-title">Added New House!</h2></div>
         <div class="panel-body">
           <h2>Congratulations!</h2>
-          <h4>You have successfully added a new landlord!</h4>
+          <h4>You have successfully added a new house!</h4>
 
           <div class="success_buttons_row">
             <input type="submit" class="btn btn-default" value="Return Home" onclick="window.location='http://www.uroost.org/index.php';" />
-            <input type="submit" class="btn btn-default" value="Add Another Landlord" onclick="window.location='http://www.uroost.org/landlords/new-landlord.php';" />
+            <input type="submit" class="btn btn-default" value="Add Another House" onclick="window.location='http://www.uroost.org/houses/new-house.php';" />
           </div>
         </div>
       </div>

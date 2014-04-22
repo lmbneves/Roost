@@ -20,6 +20,7 @@ sec_session_start();
     <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
     <link href="../css/grid.css" type="text/css" rel="stylesheet">
     <link href="../css/layout.css" type="text/css" rel="stylesheet">
+    <link href="../css/forms.css" type="text/css" rel="stylesheet">
 
     <!-- stylesheet for this site -->
     <link href="../css/base.css" type="text/css" rel="stylesheet">
@@ -216,7 +217,7 @@ sec_session_start();
 
     <!-- page content -->
     <div class="container">
-      <div class="panel panel-default">
+      <div class="panel panel-default top_margin">
         <div class="panel-heading"><h2 class="panel-title">Add New Landlord</h2></div>
         <div class="panel-body">
 

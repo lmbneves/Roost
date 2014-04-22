@@ -50,11 +50,16 @@ input {
 
   font-family: $roboto;
   font-weight: 400;
+<<<<<<< HEAD
   height: 60px;
+=======
+  height: 55px;
+>>>>>>> 22c9b2188ff1ba2ca3f465402aa9cf8a35f28960
   margin-bottom: 20px;
   
   background-color: $header-color;
 
+<<<<<<< HEAD
   img {
     float: left;
     height: 50px;
@@ -65,13 +70,20 @@ input {
     margin-right: -20px;
   }
 
+=======
+>>>>>>> 22c9b2188ff1ba2ca3f465402aa9cf8a35f28960
   #nav {
     float: left;
 
     /* navbar links */
     li {
       display: inline-block;
+<<<<<<< HEAD
       padding-right: 20px;
+=======
+      padding-right: 10px;
+      padding-left: 10px;
+>>>>>>> 22c9b2188ff1ba2ca3f465402aa9cf8a35f28960
 
       a {
         text-decoration: none;

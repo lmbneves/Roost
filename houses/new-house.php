@@ -20,6 +20,7 @@ sec_session_start();
     <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
     <link href="../css/grid.css" type="text/css" rel="stylesheet">
     <link href="../css/layout.css" type="text/css" rel="stylesheet">
+    <link href="../css/forms.css" type="text/css" rel="stylesheet">
 
     <!-- stylesheet for this site -->
     <link href="../css/base.css" type="text/css" rel="stylesheet">
@@ -41,7 +42,7 @@ sec_session_start();
       <nav class="container">
         <div class="navbar" role="navigation">
           <ul id="nav" class="list-inline list-unstyled">
-            <li><a href=""><img src="icons/logo.gif"></a></li>
+            <li><a href=""><img src="../icons/logo.gif"></a></li>
             <li><a href="">Houses</a></li>
             <li><a href="">Landlords</a></li>
           </ul>
@@ -144,14 +145,13 @@ sec_session_start();
 
     function formComplete(){
       if(($address_complete and $city_complete and $state_complete and $zipcode_complete and $landlord_fname_complete and $landlord_lname_complete and
-          $bedroom_complete and $bathrooms_complete and $parking_complete and $pets_complete and $rent_complete) == TRUE){
+          $bedrooms_complete and $bathrooms_complete and $parking_complete and $pets_complete and $rent_complete) == TRUE){
           return TRUE;
       }
       else return FALSE;
     }
 
     if(checkSet() != FALSE && $_SERVER["REQUEST_METHOD"] == "POST") {
-
       if(empty($_POST['address']) == FALSE && typeCheck($_POST['address'], 'string') != FALSE && 
           checkAddress($_POST['address']) != FALSE){
             $address = explode(" ", $_POST['address']);
@@ -160,31 +160,31 @@ sec_session_start();
             $suffix = $address[2];
             $address_complete = TRUE;
         }
-        else{
+      else{
           $addressErr = "Please enter a valid address!";
           $address_complete = FALSE;
-        }
+      }
 
-        if(empty($_POST['city']) == FALSE && typeCheck($_POST['city'], 'string') != FALSE){
+      if(empty($_POST['city']) == FALSE && typeCheck($_POST['city'], 'string') != FALSE){
           $city = $_POST['city'];
           $city_complete = TRUE;
         }
-        else{
-          $cityErr = "City is not set!";
-          $city_complete = FALSE;
+      else{
+        $cityErr = "City is not set!";
+        $city_complete = FALSE;
 
-        }
+      }
 
-        if(empty($_POST['state']) == FALSE && typeCheck($_POST['state'], 'string') != FALSE){
-          $state = $_POST['state'];
-          $state_complete = TRUE;
-        }
-        else{
-          $stateErr = "State is not set!";
-          $state_complete = FALSE;
-        }
+      if(empty($_POST['state']) == FALSE && typeCheck($_POST['state'], 'string') != FALSE){
+        $state = $_POST['state'];
+        $state_complete = TRUE;
+      }
+      else{
+        $stateErr = "State is not set!";
+        $state_complete = FALSE;
+      }
 
-        if(empty($_POST['zipcode']) == FALSE && typeCheck($_POST['zipcode'], 'numeric') != FALSE && 
+      if(empty($_POST['zipcode']) == FALSE && typeCheck($_POST['zipcode'], 'numeric') != FALSE && 
           checkZip($_POST['zipcode']) != FALSE){
           $zipcode = $_POST['zipcode'];
           $zipcode_complete = TRUE;
@@ -204,8 +204,8 @@ sec_session_start();
         }
 
         if(empty($_POST['landlord_lname']) == FALSE && typeCheck($_POST['landlord_lname'], 'string') != FALSE){
-            $landlord_fname = $_POST['landlord_lname'];
-            $landlord_fname_complete = TRUE;
+            $landlord_lname = $_POST['landlord_lname'];
+            $landlord_lname_complete = TRUE;
         }
         else{
           $landlord_lnameErr = "Please enter a first name and a last name!";
@@ -249,7 +249,7 @@ sec_session_start();
           $pets_complete = FALSE;
         }
 
-        if(empty($_POST['rent']) == FALSE && checkRent($_POST['rent'] != FALSE)){
+        if(empty($_POST['rent']) == FALSE && checkRent($_POST['rent']) != FALSE) {
           $rent = $_POST['rent'];
           $rent_complete = TRUE;
         }
@@ -260,55 +260,73 @@ sec_session_start();
 
         $id = uniqid(rand(), true);
 
-        if($address_complete and $city_complete and $state_complete and $zipcode_complete and $landlord_complete and
+        if($address_complete and $city_complete and $state_complete and $zipcode_complete and $landlord_fname_complete and $landlord_lname_complete and
           $bedrooms_complete and $bathrooms_complete and $parking_complete and $pets_complete and $rent_complete){
-          echo 'Form Complete!';
-          //Connect to mysql server
-          $connect = mysql_connect('localhost', 'urooxldw_lneves', 'houses77')
-          or die(mysql_error()); 
 
+            //Connect to mysql server
+            $connect = mysql_connect('localhost', 'urooxldw_lneves', 'houses77')
+            or die(mysql_error());
 
-          //Select which database we should use
-          $db = mysql_select_db('urooxldw_roost')
-          or die(mysql_error());
+            //Select which database we should use
+            $db = mysql_select_db('urooxldw_roost')
+            or die(mysql_error()); 
 
-          
-          $query = sprintf("INSERT INTO house (number, name, suffix, city, state, zipcode, landlord_fname, landlord_lname,
-                            bedroom, bathroom, parking, pets, price, id)
-                            VALUES('%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s')",
-                            mysql_real_escape_string($house_number),
-                            mysql_real_escape_string($street_name),
-                            mysql_real_escape_string($suffix),
-                            mysql_real_escape_string($city),
-                            mysql_real_escape_string($state),
-                            mysql_real_escape_string($zipcode),
-                            mysql_real_escape_string($landlord_fname),
-                            mysql_real_escape_string($landlord_lname),
-                            mysql_real_escape_string($bedrooms),
-                            mysql_real_escape_string($bathrooms),
-                            mysql_real_escape_string($parking),
-                            mysql_real_escape_string($pets),
-                            mysql_real_escape_string($rent),
-                            mysql_real_escape_string($id));
+            //echo 'Firstname: '.$landlord_fname;
+            //echo ' Lastname: '.$landlord_lname;
 
-          if(!mysql_query($query)){
-            echo 'Query failed '.mysql_error();
-            exit();
-          }
-          else{
-            echo 'New House Added!';
+            $landlord_id_query = sprintf("SELECT id FROM landlord WHERE fname='%s' and lname = '%s'", 
+                              mysql_real_escape_string($landlord_fname),
+                              mysql_real_escape_string($landlord_lname));
+
+            $result = mysql_query($landlord_id_query);
+
+            if(!$result){
+              echo 'Query failed'.mysql_error();
+              $landlord_fnameErr = "Landlord does not exist!";
+              $landlord_lnameErr = "Landlord does not exist!";
+            }
+            else{
+            $row = mysql_fetch_row($result);
+            $landlord_id = $row[0];
+
+            $query = sprintf("INSERT INTO house (number, name, suffix, city, state, zipcode, landlord_fname, landlord_lname,
+                              bedroom, bathroom, parking, pets, price, landlord_id, id)
+                              VALUES('%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s')",
+                              mysql_real_escape_string($house_number),
+                              mysql_real_escape_string($street_name),
+                              mysql_real_escape_string($suffix),
+                              mysql_real_escape_string($city),
+                              mysql_real_escape_string($state),
+                              mysql_real_escape_string($zipcode),
+                              mysql_real_escape_string($landlord_fname),
+                              mysql_real_escape_string($landlord_lname),
+                              mysql_real_escape_string($bedrooms),
+                              mysql_real_escape_string($bathrooms),
+                              mysql_real_escape_string($parking),
+                              mysql_real_escape_string($pets),
+                              mysql_real_escape_string($rent),
+                              mysql_real_escape_string($landlord_id),
+                              mysql_real_escape_string($id));
+
+            if(!mysql_query($query)){
+              echo 'Query failed '.mysql_error();
+              exit();
+            }
+            else{
+              echo "<script>window.location = 'http://www.uroost.org/houses/house_success.php'</script>";
+            }
           }
         }  
-        else {
-          echo 'form not complete!';
-        }                               
-    }
+    }    
+    else {
+      //echo 'form not complete!';
+    }                               
 
     ?>
 
     <!-- page content -->
     <div class="container">
-      <div class="panel panel-default">
+      <div class="panel panel-default top_margin">
         <div class="panel-heading"><h2 class="panel-title">Add New House</h2></div>
         <div class="panel-body">
 

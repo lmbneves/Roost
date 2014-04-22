@@ -1,0 +1,28 @@
+/* ====================================
+	Panel Stuff
+   ==================================== */
+
+.top_margin{
+	margin-top: 30px;
+}
+
+
+
+.success_panel{
+	text-align: center;
+	height: 300px;
+}
+
+.success_buttons_row{
+	bottom: 0;
+	padding-top: 75px;
+	width: 100%;	
+}
+
+#return_home{
+	float: left;
+}
+
+#return_landlord{
+	float: right;
+}
