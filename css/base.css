@@ -32,11 +32,22 @@ html, body {
    Footer Section
    ==================================== */
 .footer {
-  background-color: #e6e6e6; }
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  margin-top: 20px;
+  /* fixed footer height and color */
+  height: 50px;
+  background-color: #fcfcfc; 
+  text-indent: 300px;}
+  background-color: #e6e6e6; 
+}
   .footer #blurb {
-    float: left; }
+    float: left; 
+  }
   .footer #contact {
-    float: right; }
-
+    float: right; 
+  }
 .footer, .push {
-  height: 80px; }
+  height: 80px; 
+}

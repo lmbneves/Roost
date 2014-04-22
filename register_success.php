@@ -18,13 +18,17 @@
     <link href="css/base.css" type="text/css" rel="stylesheet">
 
     <!-- stylesheet for this page -->
-    <link href="css/homepage.css" type="text/css" rel="stylesheet">
+    <link href="css/new.css" type="text/css" rel="stylesheet">
 
     <!-- ============= favicons ============= -->
-    <link rel="icon" href="images/icons/logo.gif">
+     <link rel="icon" href="images/icons/logo.gif">
 
     <!-- =============== fonts =============== -->
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300,100,500' rel='stylesheet' type='text/css'>
+
+    <!-- =============== Javascript =============== -->
+    <script type="text/JavaScript" src="js/sha512.js"></script> 
+    <script type="text/JavaScript" src="js/forms.js"></script>
 
   </head>
 
@@ -34,34 +38,30 @@
     <div class="super-container navbar" role="navigation">
       <a href="index.html"><img src="images/icons/logo.svg"></a>
         <ul id="nav">
-<<<<<<< HEAD
           <li><a href="index.html">Home</a></li>
           <li><a href="BrowseSection.html">Browse</a></li>
-=======
-          <li><a href="index.html">Roost</a></li>
-          <li><a href="">Home</a></li>
-          <li><a href="">Browse</a></li>
->>>>>>> 22c9b2188ff1ba2ca3f465402aa9cf8a35f28960
         </ul>
         <ul id="register">
-          <li><a href="">Sign in</a></li>
+          <li><a href="login.html">Sign in</a></li>
           <li>|</li>
-          <li><a href="">Sign up</a></li>
+          <li><a href="signup.html">Sign up</a></li>
         </ul>
     </div>
 
     <!-- page content -->
     <div class="container">
-      <div class="lloverview">
-        <h1>Mark Stevens</h1>
-        <img src="images/profile.jpg" alt="profile picture">
-        <p> Owns <!--php inserts value here--> 5 houses</p>
+      <div class="panel panel-default">
+        <div class="panel-heading"><h2 class="panel-title">Success!</h2></div>
+          <p>You have successfully logged into Roost!</p><br/>
+          <a href="index.php">Return to Home</a>
       </div>
     </div>
 
     <!-- footer -->
     <div class="footer">
+      <div class="container">
         <p>&copy Roost 2014</p>
+      </div>
     </div>
 
     <!-- ============ javascript ============ -->

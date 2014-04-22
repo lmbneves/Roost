@@ -38,8 +38,8 @@ sec_session_start();
         <div class="navbar" role="navigation">
           <ul id="nav" class="list-inline list-unstyled">
             <li><a href=""><img src="icons/logo.gif"></a></li>
-            <li><a href="">Houses</a></li>
-            <li><a href="">Landlords</a></li>
+            <li><a href="browse_houses.php">Houses</a></li>
+            <li><a href="browse_landlords.php">Landlords</a></li>
           </ul>
         </div>
 
@@ -75,34 +75,19 @@ sec_session_start();
     </section>
 
     <!-- recent houses display -->
-    <section class="super-container recent">
-      <?php include "php/homepage.php"; ?>
-      <div id="recent-title"><h2>New Houses:</h2></div>
-      <div class="recent-content">
-        <div id="house1" class="recent-house">
-          <div class="map"></div>
-          <div class="recent-house-info">
-            <h3>237 Barton Street</h3>
-          </div>
-        </div>
-        <div id="house2" class="recent-house">
-          <div class="map"></div>
-          <div class="recent-house-info">
-            <h3>44 Congress Avenue</h3> 
-          </div>
-        </div>
-        <div id="house3" class="recent-house">
-          <div class="map"></div>
-          <div class="recent-house-info">
-            <h3>100 Custer Street</h3>
+    <section class="super-container">
+      <div class="recent">
+        <div class="recent-title"><h2>New Houses:</h2></div>
+         <div class="row">
+          <div class="container recent-content">
+            <?php include "php/homepage.php"; ?>
           </div>
         </div>
       </div>
-      <div class="push"></div>
     </section>
 
     <!-- footer -->
-    <footer class="footer navbar-fixed-bottom super-container">
+    <footer class="super-container footer navbar-fixed-bottom">
       <div class="mini-container">
         <div id="blurb">
           <h3>Roost?</h3>
@@ -112,8 +97,8 @@ sec_session_start();
             <li><h3>Contact</h3></li>
             <li>Phone: </li>
             <li>Email: </li>
-            <li>Facebook</li>
-            <li>Twitter</li>
+            <li>Facebook: </li>
+            <li>Twitter: </li>
           </ul>
         </div>
       </div>

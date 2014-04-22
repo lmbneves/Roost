@@ -31,23 +31,39 @@
     <!-- =============== fonts =============== -->
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300,100,500' rel='stylesheet' type='text/css'>
 
+    <!-- =============== Javascript =============== -->
+    <script type="text/JavaScript" src="js/sha512.js"></script> 
+    <script type="text/JavaScript" src="js/forms.js"></script>
+
   </head>
 
   <body>
 
-    <!-- top navbar -->
-    <div class="super-container navbar" role="navigation">
-      <a href="index.html"><img src="images/icons/logo.svg"></a>
-        <ul id="nav">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="BrowseSection.html">Browse</a></li>
-        </ul>
-        <ul id="register">
-          <li><a href="login.html">Sign in</a></li>
-          <li>|</li>
-          <li><a href="signup.html">Sign up</a></li>
-        </ul>
-    </div>
+      <!-- top navigation bar -->
+    <div class="super-container navbar-wrapper">
+      <nav class="container">
+        <div class="navbar" role="navigation">
+          <ul id="nav" class="list-inline list-unstyled">
+            <li><a href=""><img src="icons/logo.gif"></a></li>
+            <li><a href="">Houses</a></li>
+            <li><a href="">Landlords</a></li>
+          </ul>
+        </div>
+
+        <div class="sign-in-up">
+
+          <ul id="sign" class="list-inline list-unstyled">
+          <?php if (login_check($mysqli) == true) : ?>
+            <li><p>Welcome  <?php echo htmlentities($_SESSION['username']); ?>!</p></li>
+            <li><a href="includes/logout.php">Logout</a></li>
+          <?php else : ?>
+            <li><a href="signup.php">Sign Up</a></li>
+            <li> <a href="login.php">Sign In</a></li>
+           <?php endif; ?>  
+          </ul>
+        </div>
+      </nav>
+    </div><!-- top navigation bar, super-container -->
 
     <!-- page content -->
     <div class="container">
@@ -63,7 +79,7 @@
 
           <form action="<?php echo esc_url($_SERVER['PHP_SELF']); ?>" method="post" role="form" name="registration_form">
             <div class="form-group">
-              <label class="control-label">Username: </label>
+              <label class="control-label">Name: </label>
               <input type="text" class="form-control" name="username">
             </div>
             <div class="form-group">
@@ -80,11 +96,11 @@
             </div>
 
             <div class="input-group">
-              <input type="button" class="btn btn-default" onclick="return regformhash(this.form,
+              <input type="button" value="Sign Up" class="btn btn-default" onclick="return regformhash(this.form,
                                    this.form.username,
                                    this.form.email,
                                    this.form.password,
-                                   this.form.confirmpwd);">Sign Up</button>
+                                   this.form.confirm_password);">
             </div>  
           </form>
 

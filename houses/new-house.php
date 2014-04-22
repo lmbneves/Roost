@@ -1,3 +1,10 @@
+<?php
+include_once '../includes/db_connect.php';
+include_once '../includes/functions.php';
+ 
+sec_session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -13,6 +20,7 @@
     <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
     <link href="../css/grid.css" type="text/css" rel="stylesheet">
     <link href="../css/layout.css" type="text/css" rel="stylesheet">
+    <link href="../css/forms.css" type="text/css" rel="stylesheet">
 
     <!-- stylesheet for this site -->
     <link href="../css/base.css" type="text/css" rel="stylesheet">
@@ -29,20 +37,31 @@
 
   <body>
 
-    <!-- top navbar -->
-    <div class="super-container navbar" role="navigation">
-        <ul id="nav">
-          <li><a href="index.html">Roost</a></li>
-          <li><a href="">Home</a></li>
-          <li><a href="">Browse</a></li>
-        </ul>
-        <ul id="register">
-          <li><a href="">Sign in</a></li>
-          <li>|</li>
-          <li><a href="">Sign up</a></li>
-        </ul>
-    </div>
+    <!-- top navigation bar -->
+    <div class="super-container navbar-wrapper">
+      <nav class="container">
+        <div class="navbar" role="navigation">
+          <ul id="nav" class="list-inline list-unstyled">
+            <li><a href=""><img src="../icons/logo.gif"></a></li>
+            <li><a href="">Houses</a></li>
+            <li><a href="">Landlords</a></li>
+          </ul>
+        </div>
 
+        <div class="sign-in-up">
+
+          <ul id="sign" class="list-inline list-unstyled">
+          <?php if (login_check($mysqli) == true) : ?>
+            <li><p>Welcome  <?php echo htmlentities($_SESSION['username']); ?>!</p></li>
+            <li><a href="includes/logout.php">Logout</a></li>
+          <?php else : ?>
+            <li><a href="signup.php">Sign Up</a></li>
+            <li> <a href="login.php">Sign In</a></li>
+           <?php endif; ?>  
+          </ul>
+        </div>
+      </nav>
+    </div><!-- top navigation bar, super-container -->
         <!-- PHP Code -->
 
     <?php
@@ -74,7 +93,7 @@
     //Checks if all variables are set
     function checkSet(){
       return isset($_POST['address'], $_POST['city'], $_POST['state'], $_POST['zipcode'], 
-                  $_POST['landlord_name'], $_POST['bedrooms'], $_POST['bathrooms'], $_POST['parking'], 
+                  $_POST['landlord_fname'], $_POST['landlord_lname'], $_POST['bedrooms'], $_POST['bathrooms'], $_POST['parking'], 
                   $_POST['pets'], $_POST['rent']);
     }
 
@@ -125,15 +144,14 @@
     }
 
     function formComplete(){
-      if(($address_complete and $city_complete and $state_complete and $zipcode_complete and $landlord_complete and
-          $bedroom_complete and $bathrooms_complete and $parking_complete and $pets_complete and $rent_complete) == TRUE){
+      if(($address_complete and $city_complete and $state_complete and $zipcode_complete and $landlord_fname_complete and $landlord_lname_complete and
+          $bedrooms_complete and $bathrooms_complete and $parking_complete and $pets_complete and $rent_complete) == TRUE){
           return TRUE;
       }
       else return FALSE;
     }
 
-    if(checkSet() != FALSE && $_SERVER["REQUEST_METHOD"] == "POST"){
-
+    if(checkSet() != FALSE && $_SERVER["REQUEST_METHOD"] == "POST") {
       if(empty($_POST['address']) == FALSE && typeCheck($_POST['address'], 'string') != FALSE && 
           checkAddress($_POST['address']) != FALSE){
             $address = explode(" ", $_POST['address']);
@@ -142,31 +160,31 @@
             $suffix = $address[2];
             $address_complete = TRUE;
         }
-        else{
+      else{
           $addressErr = "Please enter a valid address!";
           $address_complete = FALSE;
-        }
+      }
 
-        if(empty($_POST['city']) == FALSE && typeCheck($_POST['city'], 'string') != FALSE){
+      if(empty($_POST['city']) == FALSE && typeCheck($_POST['city'], 'string') != FALSE){
           $city = $_POST['city'];
           $city_complete = TRUE;
         }
-        else{
-          $cityErr = "City is not set!";
-          $city_complete = FALSE;
+      else{
+        $cityErr = "City is not set!";
+        $city_complete = FALSE;
 
-        }
+      }
 
-        if(empty($_POST['state']) == FALSE && typeCheck($_POST['state'], 'string') != FALSE){
-          $state = $_POST['state'];
-          $state_complete = TRUE;
-        }
-        else{
-          $stateErr = "State is not set!";
-          $state_complete = FALSE;
-        }
+      if(empty($_POST['state']) == FALSE && typeCheck($_POST['state'], 'string') != FALSE){
+        $state = $_POST['state'];
+        $state_complete = TRUE;
+      }
+      else{
+        $stateErr = "State is not set!";
+        $state_complete = FALSE;
+      }
 
-        if(empty($_POST['zipcode']) == FALSE && typeCheck($_POST['zipcode'], 'numeric') != FALSE && 
+      if(empty($_POST['zipcode']) == FALSE && typeCheck($_POST['zipcode'], 'numeric') != FALSE && 
           checkZip($_POST['zipcode']) != FALSE){
           $zipcode = $_POST['zipcode'];
           $zipcode_complete = TRUE;
@@ -176,16 +194,22 @@
           $zipcode_complete = FALSE;
         }
 
-        if(empty($_POST['landlord_name']) == FALSE && typeCheck($_POST['landlord_name'], 'string') != FALSE && 
-          checkName($_POST['landlord_name']) != FALSE){
-            $landlord_name = explode(" ", $_POST['landlord_name']);
-            $landlord_fname = $landlord_name[0];
-            $landlord_lname = $landlord_name[1];
-            $landlord_complete = TRUE;
+        if(empty($_POST['landlord_fname']) == FALSE && typeCheck($_POST['landlord_fname'], 'string') != FALSE){
+            $landlord_fname = $_POST['landlord_fname'];
+            $landlord_fname_complete = TRUE;
         }
         else{
-          $landlordErr = "Please enter a first name and a last name!";
-          $landlord_complete = FALSE;
+          $landlord_fnameErr = "Please enter a first name and a last name!";
+          $landlord_fname_complete = FALSE;
+        }
+
+        if(empty($_POST['landlord_lname']) == FALSE && typeCheck($_POST['landlord_lname'], 'string') != FALSE){
+            $landlord_lname = $_POST['landlord_lname'];
+            $landlord_lname_complete = TRUE;
+        }
+        else{
+          $landlord_lnameErr = "Please enter a first name and a last name!";
+          $landlord_lname_complete = FALSE;
         }
 
         if($_POST['bedrooms'] != "select"){
@@ -225,7 +249,7 @@
           $pets_complete = FALSE;
         }
 
-        if(empty($_POST['rent']) == FALSE && checkRent($_POST['rent'] != FALSE)){
+        if(empty($_POST['rent']) == FALSE && checkRent($_POST['rent']) != FALSE) {
           $rent = $_POST['rent'];
           $rent_complete = TRUE;
         }
@@ -236,57 +260,73 @@
 
         $id = uniqid(rand(), true);
 
-        if($address_complete and $city_complete and $state_complete and $zipcode_complete and $landlord_complete and
+        if($address_complete and $city_complete and $state_complete and $zipcode_complete and $landlord_fname_complete and $landlord_lname_complete and
           $bedrooms_complete and $bathrooms_complete and $parking_complete and $pets_complete and $rent_complete){
-          echo 'Form Complete!';
-          //Connect to mysql server
-          $connect = mysql_connect('localhost', 'urooxldw_lneves', 'houses77')
-          or die(mysql_error()); 
 
+            //Connect to mysql server
+            $connect = mysql_connect('localhost', 'urooxldw_lneves', 'houses77')
+            or die(mysql_error());
 
-          //Select which database we should use
-          $db = mysql_select_db('urooxldw_roost')
-          or die(mysql_error());
+            //Select which database we should use
+            $db = mysql_select_db('urooxldw_roost')
+            or die(mysql_error()); 
 
-          
-          $query = sprintf("INSERT INTO house (number, name, suffix, city, state, zipcode, landlord_fname, landlord_lname,
-                            bedroom, bathroom, parking, pets, price, id)
-                            VALUES('%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s')",
-                            mysql_real_escape_string($house_number),
-                            mysql_real_escape_string($street_name),
-                            mysql_real_escape_string($suffix),
-                            mysql_real_escape_string($city),
-                            mysql_real_escape_string($state),
-                            mysql_real_escape_string($zipcode),
-                            mysql_real_escape_string($landlord_fname),
-                            mysql_real_escape_string($landlord_lname),
-                            mysql_real_escape_string($bedrooms),
-                            mysql_real_escape_string($bathrooms),
-                            mysql_real_escape_string($parking),
-                            mysql_real_escape_string($pets),
-                            mysql_real_escape_string($rent),
-                            mysql_real_escape_string($id));
+            //echo 'Firstname: '.$landlord_fname;
+            //echo ' Lastname: '.$landlord_lname;
 
-          if(!mysql_query($query)){
-            echo 'Query failed '.mysql_error();
-            exit();
-          }
-          else{
-            echo 'New House Added!';
+            $landlord_id_query = sprintf("SELECT id FROM landlord WHERE fname='%s' and lname = '%s'", 
+                              mysql_real_escape_string($landlord_fname),
+                              mysql_real_escape_string($landlord_lname));
+
+            $result = mysql_query($landlord_id_query);
+
+            if(!$result){
+              echo 'Query failed'.mysql_error();
+              $landlord_fnameErr = "Landlord does not exist!";
+              $landlord_lnameErr = "Landlord does not exist!";
+            }
+            else{
+            $row = mysql_fetch_row($result);
+            $landlord_id = $row[0];
+
+            $query = sprintf("INSERT INTO house (number, name, suffix, city, state, zipcode, landlord_fname, landlord_lname,
+                              bedroom, bathroom, parking, pets, price, landlord_id, id)
+                              VALUES('%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s')",
+                              mysql_real_escape_string($house_number),
+                              mysql_real_escape_string($street_name),
+                              mysql_real_escape_string($suffix),
+                              mysql_real_escape_string($city),
+                              mysql_real_escape_string($state),
+                              mysql_real_escape_string($zipcode),
+                              mysql_real_escape_string($landlord_fname),
+                              mysql_real_escape_string($landlord_lname),
+                              mysql_real_escape_string($bedrooms),
+                              mysql_real_escape_string($bathrooms),
+                              mysql_real_escape_string($parking),
+                              mysql_real_escape_string($pets),
+                              mysql_real_escape_string($rent),
+                              mysql_real_escape_string($landlord_id),
+                              mysql_real_escape_string($id));
+
+            if(!mysql_query($query)){
+              echo 'Query failed '.mysql_error();
+              exit();
+            }
+            else{
+              echo "<script>window.location = 'http://www.uroost.org/houses/house_success.php'</script>";
+            }
           }
         }  
-
-        else{
-          echo 'form not complete!';
-          echo $addressErr;
-        }                               
-    }
+    }    
+    else {
+      //echo 'form not complete!';
+    }                               
 
     ?>
 
     <!-- page content -->
     <div class="container">
-      <div class="panel panel-default">
+      <div class="panel panel-default top_margin">
         <div class="panel-heading"><h2 class="panel-title">Add New House</h2></div>
         <div class="panel-body">
 
@@ -312,9 +352,14 @@
               <input type="text" class="form-control" name="zipcode">
             </div>
             <div class="form-group">
-              <label class="control-label">Landlord's Name: </label>
-              <span class="has-error"><?php echo $landlordErr;?></span>
-              <input type="text" class="form-control" name="landlord_name">
+              <label class="control-label">Landlord's First Name: </label>
+              <span class="has-error"><?php echo $landlord_fnameErr;?></span>
+              <input type="text" class="form-control" name="landlord_fname">
+            </div>
+            <div class="form-group">
+              <label class="control-label">Landlord's Last Name: </label>
+              <span class="has-error"><?php echo $landlord_lnameErr;?></span>
+              <input type="text" class="form-control" name="landlord_lname">
             </div>
             <div class="form-group">
               <label class="control-label">Number of bedrooms </label>

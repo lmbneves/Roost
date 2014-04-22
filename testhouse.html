@@ -12,7 +12,7 @@
     <link href="css/base.css" type="text/css" rel="stylesheet">
 
     <!-- stylesheet for this page -->
-    <link href="css/houseprofile1.css" type="text/css" rel="stylesheet">
+    <link href="css/houseprofile.css" type="text/css" rel="stylesheet">
 
     <!-- ============= favicons ============= -->
      <link rel="icon" href="images/icons/logo.gif">
@@ -50,7 +50,7 @@
     <div class="super-container navbar" role="navigation">
         <ul id="nav">
           <li><a href="index.html">Roost</a></li>
-          <li><a href="index.html">Home</a></li>
+          <li><a href="">Home</a></li>
           <li><a href="BrowseSection.html">Browse</a></li>
         </ul>
         <ul id="register">
@@ -69,7 +69,8 @@
 	<div class="left">
 	  <dl>
 	    <dt>5 Menlo Place</dt>
-	    <dt>Rochester, New York 14620</dt><br>
+	    <dt>Rochester, New York 14620</dt>
+		<br>
 	    <dt>5 bed, 2 full, 1 partial bathroom, 2767 square feet</dt>
 	  </dl>
 	      <!-- shitty code below beware! --> 
@@ -99,46 +100,47 @@
 			</div>
 			<div class="right">
 				<p>
-				  <img border = "0" src= "images/notbadobama.png" alt="Profile Nigga" width="175" height=
+				  <img border = "0" src= "profile.jpg" alt="Profile Nigga" width="175" height=
 		      "175"><br>
-				    Landlord: <a href="">Barack Obama</a>
+				    Landlord: <a href="">John Smith</a>
 				</p>
 			</div>
 		</div>
+    <h2>Ratings and Comments</h2>
 		<div class="comments">
 			<div class="left">
 				<p><strong>Average Score</strong>
 				<dl>
 				    <dt>Price:</dt>
-				    <dd><img border = "0" src= "images/stars.png" alt="Stars Nigga" width="20" height=
+				    <dd><img border = "0" src= "Star.png" alt="Stars Nigga" width="20" height=
 		      "20">
-				    <img border = "0" src= "images/stars.png" alt="Stars Nigga" width="20" height=
+				    <img border = "0" src= "Star.png" alt="Stars Nigga" width="20" height=
 		      "20">
-				    <img border = "0" src= "images/stars.png" alt="Stars Nigga" width="20" height=
+				    <img border = "0" src= "Star.png" alt="Stars Nigga" width="20" height=
 		      "20">
-				    <img border = "0" src= "images/stars.png" alt="Stars Nigga" width="20" height=
+				    <img border = "0" src= "Star.png" alt="Stars Nigga" width="20" height=
 		      "20">
-				    <img border = "0" src= "images/stars.png" alt="Stars Nigga" width="20" height=
-		      "20"> Much price nigga</dd>
+				    <img border = "0" src= "Star.png" alt="Stars Nigga" width="20" height=
+		      "20"></dd>
 				    <dt>Distance:</dt>
-				    <dd><img border = "0" src= "images/stars.png" alt="Stars Nigga" width="20" height=
+				    <dd><img border = "0" src= "Star.png" alt="Stars Nigga" width="20" height=
 		      "20">
-				    <img border = "0" src= "images/stars.png" alt="Stars Nigga" width="20" height=
+				    <img border = "0" src= "Star.png" alt="Stars Nigga" width="20" height=
 		      "20">
-				    <img border = "0" src= "images/stars.png" alt="Stars Nigga" width="20" height=
-		      "20"> Such walk nigga</dd>
+				    <img border = "0" src= "Star.png" alt="Stars Nigga" width="20" height=
+		      "20"></dd>
 				    <dt>Utilities:</dt>
-				    <dd><img border = "0" src= "images/stars.png" alt="Stars Nigga" width="20" height=
+				    <dd><img border = "0" src= "Star.png" alt="Stars Nigga" width="20" height=
 		      "20">
-				    <img border = "0" src= "images/stars.png" alt="Stars Nigga" width="20" height=
+				    <img border = "0" src= "Star.png" alt="Stars Nigga" width="20" height=
 		      "20">
-				    <img border = "0" src= "images/stars.png" alt="Stars Nigga" width="20" height=
-		      "20">Many conservation nigga</dd>
+				    <img border = "0" src= "Star.png" alt="Stars Nigga" width="20" height=
+		      "20"></dd>
 				    <dt>Neighborhood</dt>
-				    <dd><img border = "0" src= "images/stars.png" alt="Stars Nigga" width="20" height=
+				    <dd><img border = "0" src= "Star.png" alt="Stars Nigga" width="20" height=
 		      "20">
-				    <img border = "0" src= "images/stars.png" alt="Stars Nigga" width="20" height=
-		      "20">So good in da hood nigga</dd>
+				    <img border = "0" src= "Star.png" alt="Stars Nigga" width="20" height=
+		      "20"></dd>
 				  </dl>
 				</p>
 			</div>
@@ -153,11 +155,18 @@
 		<br>
 		<fieldset>
 		<legend>COMMENTS & RATINGS:</legend>
-			<form name="input" action="" method="get">
-			Your Comment: <input type="text" name="Comment" value="Judge me"><br>
-			<input type="submit" value="Submit">
+			<form action="/html/tags/html_form_tag_action.cfm" method="post">
+			Comments:<br />
+			  <textarea name="comments" id="comments" rows="4" cols="100">Enter your comment here</textarea><br />
+			  <input type="submit" value="Submit" />
 			</form>
 		</fieldset>
+    </div>
+	<br>
+	
+	<!-- footer -->
+    <div class="footer">
+        <p>&copy Roost 2014</p>
     </div>
   </body>
 </html>
