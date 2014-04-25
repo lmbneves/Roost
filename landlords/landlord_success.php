@@ -18,17 +18,13 @@ sec_session_start();
 
     <!-- ========== CSS stylesheets ========== -->
     <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
-    <link href="../css/grid.css" type="text/css" rel="stylesheet">
-    <link href="../css/layout.css" type="text/css" rel="stylesheet">
     <link href="../css/forms.css" type="text/css" rel="stylesheet">
 
     <!-- stylesheet for this site -->
     <link href="../css/base.css" type="text/css" rel="stylesheet">
 
-    <!-- stylesheet for this page -->
-    <link href="../css/new.css" type="text/css" rel="stylesheet">
-
     <!-- ============= favicons ============= -->
+    <link rel="icon" href="../icons/logo.gif">
 
     <!-- =============== fonts =============== -->
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300,100,500' rel='stylesheet' type='text/css'>
@@ -42,29 +38,30 @@ sec_session_start();
       <nav class="container">
         <div class="navbar" role="navigation">
           <ul id="nav" class="list-inline list-unstyled">
-            <li><a href=""><img src="../icons/logo.gif"></a></li>
-            <li><a href="">Houses</a></li>
-            <li><a href="">Landlords</a></li>
+            <li><a href="http://www.uroost.org"><img src="../icons/logo.gif"></a></li>
+            <li><a href="http://www.uroost.org/browse_houses.php">Houses</a></li>
+            <li><a href="http://www.uroost.org/browse_landlords.php">Landlords</a></li>
           </ul>
         </div>
 
-        <div class="sign-in-up">
+         <div class="sign-in-up">
 
-          <ul id="sign" class="list-inline list-unstyled">
-          <?php if (login_check($mysqli) == true) : ?>
-            <li><p>Welcome  <?php echo htmlentities($_SESSION['username']); ?>!</p></li>
-            <li><a href="includes/logout.php">Logout</a></li>
-          <?php else : ?>
-            <li><a href="signup.php">Sign Up</a></li>
-            <li> <a href="login.php">Sign In</a></li>
-           <?php endif; ?>  
-          </ul>
-        </div>
+            <ul id="sign" class="list-inline list-unstyled">
+            <?php if (login_check($mysqli) == true) : ?>
+              <li><p><?php echo '<a href="http://www.uroost.org/user_profile.php?id='.$_SESSION['user_id'].'">'
+                              .htmlentities($_SESSION['username']).'</a>'; ?></p></li>
+              <li><a href="../includes/logout.php">Logout</a></li>
+            <?php else : ?>
+              <li><a href="http://www.uroost.org/signup.php">Sign Up</a></li>
+              <li> <a href="http://www.uroost.org/login.php">Sign In</a></li>
+             <?php endif; ?>  
+            </ul>
+          </div>
       </nav>
     </div><!-- top navigation bar, super-container -->
 
     <!-- page content -->
-    <div class="container">
+    <div class="container-form">
       <div class="panel panel-default success_panel top_margin">
         <div class="panel-heading"><h2 class="panel-title">Added New Landlord!</h2></div>
         <div class="panel-body">
@@ -80,11 +77,22 @@ sec_session_start();
     </div>
 
     <!-- footer -->
-    <div class="footer">
+    <footer class="super-container footer navbar-fixed-bottom fixed">
       <div class="container">
-        <p>&copy Roost 2014</p>
+        <div id="blurb">
+          <h3>Roost?</h3>
+        </div>
+        <div id="contact">
+          <ul class="list-unstyled">
+            <li><h3>Contact</h3></li>
+            <li>Phone: </li>
+            <li>Email: </li>
+            <li>Facebook: </li>
+            <li>Twitter: </li>
+          </ul>
+        </div>
       </div>
-    </div>
+    </footer>
 
     <!-- ============ javascript ============ -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>

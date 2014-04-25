@@ -38,9 +38,9 @@ sec_session_start();
       <nav class="container">
         <div class="navbar" role="navigation">
           <ul id="nav" class="list-inline list-unstyled">
-            <li><a href=""><img src="../icons/logo.gif"></a></li>
-            <li><a href="">Houses</a></li>
-            <li><a href="">Landlords</a></li>
+            <li><a href="http://www.uroost.org"><img src="../icons/logo.gif"></a></li>
+            <li><a href="http://www.uroost.org/browse_houses.php">Houses</a></li>
+            <li><a href="http://www.uroost.org/browse_landlords.php">Landlords</a></li>
           </ul>
         </div>
 
@@ -63,10 +63,10 @@ sec_session_start();
     <!-- page content -->
     <div class="container-form">
       <div class="panel panel-default success_panel top_margin">
-        <div class="panel-heading"><h2 class="panel-title">Added New House!</h2></div>
+        <div class="panel-heading"><h2 class="panel-title">Uh Oh!</h2></div>
         <div class="panel-body">
-          <h2>Congratulations!</h2>
-          <h4>You have successfully added a new house!</h4>
+          <h2>Sorry!</h2>
+          <h4>It looks like someone else has already added this house!</h4>
 
           <div class="success_buttons_row">
             <input type="submit" class="btn btn-default" value="Return Home" onclick="window.location='http://www.uroost.org/index.php';" />
@@ -76,7 +76,7 @@ sec_session_start();
       </div>
     </div>
 
-    <!-- footer -->
+     <!-- footer -->
     <footer class="super-container footer navbar-fixed-bottom fixed">
       <div class="container">
         <div id="blurb">

@@ -13,8 +13,8 @@ if (isset($_POST['email'], $_POST['p'])) {
         header('Location: ../index.php');
     } else {
         // Login failed 
-        //header('Location: ../index.php?error=1');
-        $loginErr = "Incorrect Username/Password!";
+        //$loginErr = "Incorrect Username/Password!";
+        header('Location: ../login.php?error=1');
     }
 } else {
     // The correct POST variables were not sent to this page. 

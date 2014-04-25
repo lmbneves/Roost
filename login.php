@@ -24,14 +24,10 @@ if (login_check($mysqli) == true) {
 
     <!-- ========== CSS stylesheets ========== -->
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-    <link href="css/grid.css" type="text/css" rel="stylesheet">
-    <link href="css/layout.css" type="text/css" rel="stylesheet">
+    <link href="css/forms.css" type="text/css" rel="stylesheet">
 
     <!-- stylesheet for this site -->
     <link href="css/base.css" type="text/css" rel="stylesheet">
-
-    <!-- stylesheet for this page -->
-    <link href="css/new.css" type="text/css" rel="stylesheet">
 
     <!-- ============= favicons ============= -->
      <link rel="icon" href="images/icons/logo.gif">
@@ -52,9 +48,9 @@ if (login_check($mysqli) == true) {
       <nav class="container">
         <div class="navbar" role="navigation">
           <ul id="nav" class="list-inline list-unstyled">
-            <li><a href=""><img src="icons/logo.gif"></a></li>
-            <li><a href="">Houses</a></li>
-            <li><a href="">Landlords</a></li>
+            <li><a href="index.php"><img src="icons/logo.gif"></a></li>
+            <li><a href="browse_houses.php">Houses</a></li>
+            <li><a href="browse_landlords.php">Landlords</a></li>
           </ul>
         </div>
 
@@ -74,42 +70,53 @@ if (login_check($mysqli) == true) {
     </div><!-- top navigation bar, super-container -->
 
     <!-- page content -->
-    <div class="container">
-      <div class="panel panel-default">
+    <div class="container-form">
+      <div class="panel panel-default top_margin">
         <div class="panel-heading"><h2 class="panel-title">Login</h2></div>
         <div class="panel-body">
         <?php
         if (isset($_GET['error'])) {
-            echo '<p class="error">Error Logging In!</p>';
+            echo '<p class="error">Incorrect Username/Password!</p>';
         }
         ?>
         <?php echo $loginErr?>
 
-          <form action="includes/process_login.php" method="post" role="form" name="login_form">
+          <form action="includes/process_login.php" method="post" name="login_form">
             <div class="form-group">
               <label class="control-label">Email: </label>
               <input type="text" class="form-control" name="email">
             </div>
             <div class="form-group">
               <label class="control-label">Password: </label>
-              <input type="password" class="form-control" name="password">
+              <input type="password" class="form-control" name="password">                      
             </div>
-
-            <div class="input-group">
-              <input type="button" value="Login" onclick="formhash(this.form, this.form.password);" />
-            </div>  
+            <input type="button" class="btn btn-default" 
+                     value="Login" 
+                     onclick="formhash(this.form, this.form.password);" /> 
           </form>
-           <p>Don't have an account? <a href="signup.php">Register Now</a></p>
+          <p class="no-account">Don't have an account? <a href="signup.php">Register Now</a></p>
         </div>
       </div>
     </div>
 
     <!-- footer -->
-    <div class="footer">
+    <footer class="super-container footer navbar-fixed-bottom fixed">
       <div class="container">
-        <p>&copy Roost 2014</p>
+        <div id="blurb">
+          <h3>What is Roost?</h3>
+          <p>Roost is a house listing and rating service for students looking to live off-campus. Here, students can search for houses, get to know landlords, and share their off-campus housing experiences with other students.</p>
+        </div>
+        <div id="contact">
+          <ul class="list-unstyled">
+            <li><h3>Contact</h3></li>
+            <li>Phone: </li>
+            <li>Email: </li>
+            <li>Facebook: </li>
+            <li>Twitter: </li>
+          </ul>
+        </div>
       </div>
-    </div>
+    </footer>
 
     <!-- ============ javascript ============ -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>

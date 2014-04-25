@@ -1,3 +1,10 @@
+<?php
+include_once 'includes/db_connect.php';
+include_once 'includes/functions.php';
+ 
+sec_session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -13,6 +20,7 @@
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
     <link href="css/grid.css" type="text/css" rel="stylesheet">
     <link href="css/layout.css" type="text/css" rel="stylesheet">
+    <link href="css/forms.css" type="text/css" rel="stylesheet">
 
     <!-- stylesheet for this site -->
     <link href="css/base.css" type="text/css" rel="stylesheet">
@@ -21,48 +29,72 @@
     <link href="css/new.css" type="text/css" rel="stylesheet">
 
     <!-- ============= favicons ============= -->
-     <link rel="icon" href="images/icons/logo.gif">
 
     <!-- =============== fonts =============== -->
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300,100,500' rel='stylesheet' type='text/css'>
-
-    <!-- =============== Javascript =============== -->
-    <script type="text/JavaScript" src="js/sha512.js"></script> 
-    <script type="text/JavaScript" src="js/forms.js"></script>
 
   </head>
 
   <body>
 
-    <!-- top navbar -->
-    <div class="super-container navbar" role="navigation">
-      <a href="index.html"><img src="images/icons/logo.svg"></a>
-        <ul id="nav">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="BrowseSection.html">Browse</a></li>
-        </ul>
-        <ul id="register">
-          <li><a href="login.html">Sign in</a></li>
-          <li>|</li>
-          <li><a href="signup.html">Sign up</a></li>
-        </ul>
-    </div>
+    <!-- top navigation bar -->
+    <div class="super-container navbar-wrapper">
+      <nav class="container">
+        <div class="navbar" role="navigation">
+          <ul id="nav" class="list-inline list-unstyled">
+            <li><a href=""><img src="icons/logo.gif"></a></li>
+            <li><a href="">Houses</a></li>
+            <li><a href="">Landlords</a></li>
+          </ul>
+        </div>
+
+        <div class="sign-in-up">
+
+          <ul id="sign" class="list-inline list-unstyled">
+          <?php if (login_check($mysqli) == true) : ?>
+            <li><p>Welcome  <?php echo htmlentities($_SESSION['username']); ?>!</p></li>
+            <li><a href="includes/logout.php">Logout</a></li>
+          <?php else : ?>
+            <li><a href="signup.php">Sign Up</a></li>
+            <li> <a href="login.php">Sign In</a></li>
+           <?php endif; ?>  
+          </ul>
+        </div>
+      </nav>
+    </div><!-- top navigation bar, super-container -->
 
     <!-- page content -->
     <div class="container">
-      <div class="panel panel-default">
-        <div class="panel-heading"><h2 class="panel-title">Success!</h2></div>
-          <p>You have successfully logged into Roost!</p><br/>
-          <a href="index.php">Return to Home</a>
+      <div class="panel panel-default success_panel top_margin">
+        <div class="panel-heading"><h2 class="panel-title">Registered Successfully!</h2></div>
+        <div class="panel-body">
+          <h2>Congratulations!</h2>
+          <h4>You have successfully registered for Roost!</h4>
+
+          <div class="success_buttons_row">
+            <input type="submit" class="btn btn-default" value="Return Home" onclick="window.location='http://www.uroost.org/index.php';" />
+          </div>
+        </div>
       </div>
     </div>
 
-    <!-- footer -->
-    <div class="footer">
+         <!-- footer -->
+    <footer class="super-container footer navbar-fixed-bottom">
       <div class="container">
-        <p>&copy Roost 2014</p>
+        <div id="blurb">
+          <h3>Roost?</h3>
+        </div>
+        <div id="contact">
+          <ul class="list-unstyled">
+            <li><h3>Contact</h3></li>
+            <li>Phone: </li>
+            <li>Email: </li>
+            <li>Facebook: </li>
+            <li>Twitter: </li>
+          </ul>
+        </div>
       </div>
-    </div>
+    </footer>
 
     <!-- ============ javascript ============ -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>

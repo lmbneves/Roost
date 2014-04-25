@@ -16,14 +16,10 @@
 
     <!-- ========== CSS stylesheets ========== -->
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-    <link href="css/grid.css" type="text/css" rel="stylesheet">
-    <link href="css/layout.css" type="text/css" rel="stylesheet">
+    <link href="css/forms.css" type="text/css" rel="stylesheet">
 
     <!-- stylesheet for this site -->
     <link href="css/base.css" type="text/css" rel="stylesheet">
-
-    <!-- stylesheet for this page -->
-    <link href="css/new.css" type="text/css" rel="stylesheet">
 
     <!-- ============= favicons ============= -->
      <link rel="icon" href="images/icons/logo.gif">
@@ -44,9 +40,9 @@
       <nav class="container">
         <div class="navbar" role="navigation">
           <ul id="nav" class="list-inline list-unstyled">
-            <li><a href=""><img src="icons/logo.gif"></a></li>
-            <li><a href="">Houses</a></li>
-            <li><a href="">Landlords</a></li>
+            <li><a href="index.php"><img src="icons/logo.gif"></a></li>
+            <li><a href="browse_houses.php">Houses</a></li>
+            <li><a href="browse_landlords.php">Landlords</a></li>
           </ul>
         </div>
 
@@ -66,8 +62,8 @@
     </div><!-- top navigation bar, super-container -->
 
     <!-- page content -->
-    <div class="container">
-      <div class="panel panel-default">
+    <div class="container-form">
+      <div class="panel panel-default top_margin">
         <div class="panel-heading"><h2 class="panel-title">Sign Up</h2></div>
         <div class="panel-body">
 
@@ -109,11 +105,23 @@
     </div>
 
     <!-- footer -->
-    <div class="footer">
+    <footer class="super-container footer navbar-fixed-bottom fixed">
       <div class="container">
-        <p>&copy Roost 2014</p>
+        <div id="blurb">
+          <h3>What is Roost?</h3>
+          <p>Roost is a house listing and rating service for students looking to live off-campus. Here, students can search for houses, get to know landlords, and share their off-campus housing experiences with other students.</p>
+        </div>
+        <div id="contact">
+          <ul class="list-unstyled">
+            <li><h3>Contact</h3></li>
+            <li>Phone: </li>
+            <li>Email: </li>
+            <li>Facebook: </li>
+            <li>Twitter: </li>
+          </ul>
+        </div>
       </div>
-    </div>
+    </footer>
 
     <!-- ============ javascript ============ -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
