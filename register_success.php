@@ -3,12 +3,6 @@ include_once 'includes/db_connect.php';
 include_once 'includes/functions.php';
  
 sec_session_start();
- 
-if (login_check($mysqli) == true) {
-    $logged = 'in';
-} else {
-    $logged = 'out';
-}
 ?>
 
 <!DOCTYPE html>
@@ -24,33 +18,33 @@ if (login_check($mysqli) == true) {
 
     <!-- ========== CSS stylesheets ========== -->
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link href="css/grid.css" type="text/css" rel="stylesheet">
+    <link href="css/layout.css" type="text/css" rel="stylesheet">
     <link href="css/forms.css" type="text/css" rel="stylesheet">
 
     <!-- stylesheet for this site -->
     <link href="css/base.css" type="text/css" rel="stylesheet">
 
+    <!-- stylesheet for this page -->
+    <link href="css/new.css" type="text/css" rel="stylesheet">
+
     <!-- ============= favicons ============= -->
-     <link rel="icon" href="images/icons/logo.gif">
 
     <!-- =============== fonts =============== -->
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300,100,500' rel='stylesheet' type='text/css'>
-
-    <!-- =============== Javascript =============== -->
-    <script type="text/JavaScript" src="js/sha512.js"></script> 
-    <script type="text/JavaScript" src="js/forms.js"></script>
 
   </head>
 
   <body>
 
-      <!-- top navigation bar -->
+    <!-- top navigation bar -->
     <div class="super-container navbar-wrapper">
       <nav class="container">
         <div class="navbar" role="navigation">
           <ul id="nav" class="list-inline list-unstyled">
-            <li><a href="index.php"><img src="icons/logo.gif"></a></li>
-            <li><a href="browse_houses.php">Houses</a></li>
-            <li><a href="browse_landlords.php">Landlords</a></li>
+            <li><a href=""><img src="icons/logo.gif"></a></li>
+            <li><a href="">Houses</a></li>
+            <li><a href="">Landlords</a></li>
           </ul>
         </div>
 
@@ -70,41 +64,25 @@ if (login_check($mysqli) == true) {
     </div><!-- top navigation bar, super-container -->
 
     <!-- page content -->
-    <div class="container-form">
-      <div class="panel panel-default top_margin">
-        <div class="panel-heading"><h2 class="panel-title">Login</h2></div>
+    <div class="container">
+      <div class="panel panel-default success_panel top_margin">
+        <div class="panel-heading"><h2 class="panel-title">Registered Successfully!</h2></div>
         <div class="panel-body">
-        <?php
-        if (isset($_GET['error'])) {
-            echo '<p class="error">Incorrect Username/Password!</p>';
-        }
-        ?>
-        <?php echo $loginErr?>
+          <h2>Congratulations!</h2>
+          <h4>You have successfully registered for Roost!</h4>
 
-          <form action="includes/process_login.php" method="post" name="login_form">
-            <div class="form-group">
-              <label class="control-label">Email: </label>
-              <input type="text" class="form-control" name="email">
-            </div>
-            <div class="form-group">
-              <label class="control-label">Password: </label>
-              <input type="password" class="form-control" name="password">                      
-            </div>
-            <input type="button" class="btn btn-default" 
-                     value="Login" 
-                     onclick="formhash(this.form, this.form.password);" /> 
-          </form>
-          <p class="no-account">Don't have an account? <a href="signup.php">Register Now</a></p>
+          <div class="success_buttons_row">
+            <input type="submit" class="btn btn-default" value="Return Home" onclick="window.location='http://www.uroost.org/index.php';" />
+          </div>
         </div>
       </div>
     </div>
 
-    <!-- footer -->
-    <footer class="super-container footer navbar-fixed-bottom fixed">
+         <!-- footer -->
+    <footer class="super-container footer navbar-fixed-bottom">
       <div class="container">
         <div id="blurb">
-          <h3>What is Roost?</h3>
-          <p>Roost is a house listing and rating service for students looking to live off-campus. Here, students can search for houses, get to know landlords, and share their off-campus housing experiences with other students.</p>
+          <h3>Roost?</h3>
         </div>
         <div id="contact">
           <ul class="list-unstyled">

@@ -1,0 +1,69 @@
+/* ====================================
+   Constants/Variables
+   ==================================== */
+/* ====================================
+   Search Bar Section
+   ==================================== */
+.search-area {
+  background-image: url(../darkimages/blurredskyline.jpg); 
+  padding-bottom: 150px;}
+
+.form-group {
+  float: left;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%; }
+
+.search-bar {
+  margin-top: 5%;
+  width: 40%; }
+
+#main-search {
+  min-width: 50%; }
+
+/* ====================================
+   Search Results
+   ==================================== */
+.results {
+  background-color: white;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -80px;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 80px;
+  overflow: hidden;
+}
+
+.result {
+  margin: 20px;
+  padding: 10px;
+  border: 1px solid #dddddd;
+  box-shadow: 5px 5px 5px #dddddd;
+  width: 500px;
+  float: left;
+}
+
+.browse-landlord-img {
+  float: left;
+}
+
+.browse-landlord-img img {
+  height: 155px;
+  width: 155px;
+  margin-right: 20px;
+}
+
+.result-title a {
+  text-decoration: none;
+  color: #547487;
+}
+
+.result-title a:hover{
+  color: #31444F;
+}
+
+.result-info {
+  margin-top: -10px;
+  padding-bottom: 10px;
+}

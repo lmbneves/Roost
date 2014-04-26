@@ -4,9 +4,12 @@
 html, body {
   height: 100%;
   background-color: #FFA672;
-  // padding-bottom: 70px; // so bottom navbar won't overlay body content
+  padding-bottom: 70px; // so bottom navbar won't overlay body content
   min-width: 1330px; // stops responsiveness
-  bottom: 0;
+}
+
+.clear {
+  clear: both;
 }
 
 /* ====================================
@@ -15,8 +18,6 @@ html, body {
 .navbar-wrapper {
   background-color: white;
   height: 80px; 
-  position: relative;
-  z-index: 1000;
 }
 
 .navbar { // houses, landlords
@@ -38,6 +39,7 @@ html, body {
    Footer Section
    ==================================== */
 .footer {
+  bottom: 0;
   background-color: darken(white, 10%);
 
   #blurb {
@@ -47,8 +49,4 @@ html, body {
   #contact {
     float: right;
   }
-}
-
-.footer, .push {
-  height: 80px;
 }

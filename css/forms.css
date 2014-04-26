@@ -1,0 +1,48 @@
+/* ====================================
+	Panel Stuff
+   ==================================== */
+
+/*Specific container for pages with forms & login pages*/
+.container-form{
+	width: 970px;
+	margin: 0 auto 0 auto;
+}
+
+.top_margin{
+	margin-top: 30px;
+	min-height: 400px;
+}
+
+.success_panel{
+	text-align: center;
+	height: 300px;
+}
+
+.success_buttons_row{
+	bottom: 0;
+	padding-top: 75px;
+	width: 100%;	
+}
+
+#return_home{
+	float: left;
+}
+
+#return_landlord{
+	float: right;
+}
+
+.error{
+	color: #CC3333;
+}
+
+.no-account{
+	padding-top: 30px;
+}
+
+.edit-button{
+	position: absolute;
+	float: right;
+	top: 0;
+	right: 0;
+}

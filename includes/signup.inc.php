@@ -1,6 +1,7 @@
 <?php
 include_once 'db_connect.php';
 include_once 'psl-config.php';
+include_once 'functions.php';
  
 $error_msg = "";
  
@@ -62,6 +63,7 @@ if (isset($_POST['username'], $_POST['email'], $_POST['p'])) {
                 header('Location: ../error.php?err=Registration failure: INSERT');
             }
         }
+        //login($email, $password, $mysqli);
         header('Location: ./register_success.php');
     }
 }
